@@ -213,7 +213,7 @@ const Telas = () => {
               )}
               <div className="relative z-10 bg-zinc-900 border-2 border-black p-1.5 md:p-3.5 rounded-lg md:rounded-xl shadow-[2px_2px_0_0_black] md:shadow-[3px_3px_0_0_black] w-full md:max-w-xs mt-auto flex items-center gap-1 md:gap-2 -rotate-1">
                 <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0 animate-pulse" />
-                <p className="text-white font-black text-[8px] md:text-sm uppercase font-syne tracking-wider leading-tight truncate">{starredItem.title}</p>
+                <p className="text-white font-black text-[8px] md:text-sm uppercase font-outfit tracking-wider leading-tight truncate">{starredItem.title}</p>
               </div>
             </div>
           )}
@@ -237,7 +237,7 @@ const Telas = () => {
               )}
               <div className="relative z-10 bg-zinc-900 border-2 border-black p-1 md:p-2.5 rounded md:rounded-lg shadow-[1.5px_1.5px_0_0_black] md:shadow-[2.5px_2.5px_0_0_black] w-full mt-auto flex items-center gap-1 md:gap-1.5 rotate-1">
                 <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0" />
-                <p className="text-white font-black uppercase font-syne tracking-wider text-[7px] md:text-[10px] truncate">{item.title}</p>
+                <p className="text-white font-black uppercase font-outfit tracking-wider text-[7px] md:text-[10px] truncate">{item.title}</p>
               </div>
             </div>
           ))}

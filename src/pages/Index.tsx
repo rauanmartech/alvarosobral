@@ -150,7 +150,7 @@ const Index = () => {
               </div>
               {/* Pop-art floating label */}
               <div className="absolute top-5 left-0 right-0 flex justify-center md:left-5 md:right-auto md:inline-flex z-10">
-                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-alpha">
+                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-outfit">
                   Tattoo
                 </span>
               </div>
@@ -177,7 +177,7 @@ const Index = () => {
               </div>
               {/* Pop-art floating label */}
               <div className="absolute top-5 left-0 right-0 flex justify-center md:left-5 md:right-auto md:inline-flex z-10">
-                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-alpha">
+                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-outfit">
                   Graffiti
                 </span>
               </div>
@@ -204,7 +204,7 @@ const Index = () => {
               </div>
               {/* Pop-art floating label */}
               <div className="absolute top-5 left-0 right-0 flex justify-center md:left-5 md:right-auto md:inline-flex z-10">
-                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-alpha">
+                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-outfit">
                   Telas
                 </span>
               </div>
@@ -231,7 +231,7 @@ const Index = () => {
               </div>
               {/* Pop-art floating label */}
               <div className="absolute top-5 left-0 right-0 flex justify-center md:left-5 md:right-auto md:inline-flex z-10">
-                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-alpha">
+                <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-outfit">
                   Digital
                 </span>
               </div>
