@@ -175,14 +175,14 @@ const Graffiti = () => {
       <div className="container mx-auto px-6 pb-32">
         <div className="flex flex-col md:flex-row md:items-end justify-between items-center md:items-end text-center md:text-left mb-16 gap-6">
           <div className="flex flex-col items-center md:items-start">
-            <h2 className="text-5xl font-black font-syne uppercase leading-none">
+            <h2 className="text-5xl font-black font-outfit uppercase leading-none">
               Murais <br />
               <span className="text-[hsl(var(--accent-orange))]">Recentes</span>
             </h2>
             <p className="text-black/40 font-outfit mt-4 max-w-sm">Uma seleção de intervenções urbanas e murais que transformaram espaços públicos e privados.</p>
           </div>
           <div className="flex gap-4 w-full md:w-auto justify-center">
-            <a href="https://instagram.com" target="_blank" className="flex items-center justify-center w-full md:w-auto gap-3 bg-black text-white px-6 py-3 rounded-2xl font-black shadow-[4px_4px_0_0_hsl(var(--accent-orange))] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all font-syne uppercase text-sm">
+            <a href="https://instagram.com" target="_blank" className="flex items-center justify-center w-full md:w-auto gap-3 bg-black text-white px-6 py-3 rounded-2xl font-black shadow-[4px_4px_0_0_hsl(var(--accent-orange))] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all font-outfit uppercase text-sm">
               <Instagram className="w-5 h-5" />
               Ver no Insta
             </a>
