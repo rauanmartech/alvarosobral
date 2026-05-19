@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
+
+.hero-physics-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.physics-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.physics-scene canvas {
+  display: none; /* We only use it for internal Matter.js logic */
+}
+
+.physics-capsule {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid #000000;
+  border-radius: 999px; /* Pill shape */
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+  user-select: none;
+}
+
+.physics-capsule:hover {
+  border-color: #555;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.physics-capsule:active {
+  transform: scale(0.98);
+}
+
+.organic-splash {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 60%;
+  height: 60%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.organic-splash svg {
+  width: 100%;
+  height: 100%;
+}
+
+.splash-main {
+  /* You can add a filter here for more organic feel if needed */
+  filter: url(#goo);
+}
+
+/* Custom Splash Shape */
+.organic-splash path {
+  fill: #000000;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .physics-capsule {
+    padding: 0 20px;
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .organic-splash {
+    width: 80%;
+    height: 80%;
+  }
+}
