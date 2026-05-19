@@ -82,7 +82,7 @@ const Sobre = () => {
                   className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-16 top-0 w-48 h-48 opacity-10 brightness-0 invert pointer-events-none z-0 rotate-12"
                 />
                 <p className="relative z-10 text-xl font-medium font-outfit text-black/60 mb-4 italic">Olá, eu sou o Alvaro,</p>
-                <h1 className="relative z-10 text-5xl md:text-7xl font-black font-syne leading-[0.8] text-black uppercase mb-8">
+                <h1 className="relative z-10 text-5xl md:text-7xl font-black font-outfit leading-[0.8] text-black uppercase mb-8">
                   UM <span className="text-black lg:text-[hsl(var(--accent-orange))]">ARTIS</span>TA <br />
                   <span className="italic font-light lowercase">multidisciplinar</span> <br />
                 </h1>
@@ -92,7 +92,7 @@ const Sobre = () => {
                 <a
                   href="https://wa.me/seunumero"
                   target="_blank"
-                  className="relative z-10 inline-flex items-center justify-center gap-4 bg-[hsl(var(--accent-orange))] md:bg-black text-black md:text-white px-8 py-4 border-2 md:border-0 border-black rounded-full font-black font-syne uppercase tracking-widest text-xs md:text-sm hover:bg-black md:hover:bg-[hsl(var(--accent-orange))] hover:text-white transition-all shadow-[4px_4px_0_0_black] md:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0_0_black] md:active:translate-y-0 group w-full md:w-auto"
+                  className="relative z-10 inline-flex items-center justify-center gap-4 bg-[hsl(var(--accent-orange))] md:bg-black text-black md:text-white px-8 py-4 border-2 md:border-0 border-black rounded-full font-black font-outfit uppercase tracking-widest text-xs md:text-sm hover:bg-black md:hover:bg-[hsl(var(--accent-orange))] hover:text-white transition-all shadow-[4px_4px_0_0_black] md:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0_0_black] md:active:translate-y-0 group w-full md:w-auto"
                 >
                   Entre em Contato
                   <div className="w-8 h-8 bg-black md:bg-white rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform shrink-0">
@@ -103,19 +103,19 @@ const Sobre = () => {
                 {/* Mobile Statistics (2x2 Grid) */}
                 <div className="grid grid-cols-2 gap-x-8 gap-y-10 mt-16 w-full lg:hidden text-center">
                   <div>
-                    <p className="text-5xl font-black font-syne text-black leading-none">15+</p>
+                    <p className="text-5xl font-black font-outfit text-black leading-none">15+</p>
                     <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Anos de Experiência</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-black font-syne text-black leading-none">280+</p>
+                    <p className="text-5xl font-black font-outfit text-black leading-none">280+</p>
                     <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Projetos Entregues</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-black font-syne text-black leading-none">*99%</p>
+                    <p className="text-5xl font-black font-outfit text-black leading-none">*99%</p>
                     <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Satisfação dos Clientes</p>
                   </div>
                   <div>
-                    <p className="text-5xl font-black font-syne text-black leading-none">50</p>
+                    <p className="text-5xl font-black font-outfit text-black leading-none">50</p>
                     <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Clientes pelo mundo</p>
                   </div>
                 </div>
@@ -124,19 +124,19 @@ const Sobre = () => {
               {/* Right Side: Statistics (Desktop Only) */}
               <div className="hidden lg:flex flex-col gap-12 text-right w-full lg:w-auto mt-12 lg:mt-0">
                 <div>
-                  <p className="text-6xl font-black font-syne text-black leading-none">15+</p>
+                  <p className="text-6xl font-black font-outfit text-black leading-none">15+</p>
                   <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Anos de Experiência</p>
                 </div>
                 <div>
-                  <p className="text-6xl font-black font-syne text-black leading-none">280+</p>
+                  <p className="text-6xl font-black font-outfit text-black leading-none">280+</p>
                   <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Projetos Entregues</p>
                 </div>
                 <div>
-                  <p className="text-6xl font-black font-syne text-black leading-none">*99%</p>
+                  <p className="text-6xl font-black font-outfit text-black leading-none">*99%</p>
                   <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Satisfação dos Clientes</p>
                 </div>
                 <div>
-                  <p className="text-6xl font-black font-syne text-black leading-none">50</p>
+                  <p className="text-6xl font-black font-outfit text-black leading-none">50</p>
                   <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Clientes pelo mundo</p>
                 </div>
               </div>
@@ -156,7 +156,7 @@ const Sobre = () => {
                 className="absolute -left-12 -top-4 w-32 h-32 opacity-5 brightness-0 invert pointer-events-none z-0 -rotate-12"
               />
               <div className="flex items-center justify-between gap-4 w-full md:block">
-                <h2 className="relative z-10 text-3xl md:text-5xl font-black font-syne uppercase leading-tight flex-1 text-center md:text-left">
+                <h2 className="relative z-10 text-3xl md:text-5xl font-black font-outfit uppercase leading-tight flex-1 text-center md:text-left">
                   O Início <br />
                   <span className="text-[hsl(var(--accent-orange))]">de Tudo</span>
                 </h2>
@@ -212,7 +212,7 @@ const Sobre = () => {
                   )}
                 </div>
 
-                <h2 className="relative z-10 text-3xl md:text-5xl font-black font-syne uppercase leading-tight flex-1 text-center md:text-right">
+                <h2 className="relative z-10 text-3xl md:text-5xl font-black font-outfit uppercase leading-tight flex-1 text-center md:text-right">
                   Minha <br />
                   <span className="text-[hsl(var(--accent-orange))]">Filosofia</span>
                 </h2>
