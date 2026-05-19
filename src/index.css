@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Syne:wght@400..800&display=swap');
-
 @font-face {
   font-family: 'Alpha';
   src: url('./fonts/Alpha-Regular.otf') format('opentype'),

@@ -92,6 +92,7 @@ const Telas = () => {
                 <img 
                   src={star} 
                   alt="" 
+                  loading="lazy"
                   className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-20 top-1/2 -translate-y-1/2 w-56 h-56 opacity-20 brightness-0 invert pointer-events-none z-0 rotate-12"
                 />
                 <h1 className="relative z-10 text-6xl md:text-8xl font-black font-syne mb-6 leading-[0.9] text-white uppercase">
@@ -101,7 +102,7 @@ const Telas = () => {
               </div>
 
               <p className="text-lg md:text-xl text-white/50 font-outfit mb-10 max-w-xl leading-relaxed">
-                Nas telas, minha arte encontra a pausa e a profundidade. É onde exploro texturas, camadas e a liberdade do pincel. Cada quadro é um fragmento de um universo particular que convida à contemplação.
+                Nas telas, minha arte encontra a pausa e a profundidade. É onde exploro texturas, camadas e a liberdade do pincel. Cada quadro é um fragmento de um universe particular que convida à contemplação.
               </p>
 
               {/* Info Bar - UX Improved (Differentiating Info vs Action) */}
@@ -145,6 +146,8 @@ const Telas = () => {
               <img 
                 src={telaShape} 
                 alt="Tela Shape" 
+                loading="eager"
+                fetchPriority="high"
                 className="relative z-10 w-full max-w-[260px] md:max-w-none h-auto object-contain object-center lg:object-right lg:scale-[0.87] lg:origin-right"
               />
 
@@ -152,18 +155,21 @@ const Telas = () => {
               <img 
                 src={blobPaint} 
                 alt="" 
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[55px] md:w-[90px] top-[8%] left-[8%] lg:left-auto lg:right-[82%]" 
                 style={{ animation: 'floatA 5s ease-in-out infinite' }} 
               />
               <img 
                 src={blobFace} 
                 alt="" 
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[45px] md:w-[75px] bottom-[15%] left-[12%] lg:left-auto lg:right-[72%]" 
                 style={{ animation: 'floatB 6s ease-in-out infinite' }} 
               />
               <img 
                 src={blobSpray} 
                 alt="" 
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[40px] md:w-[60px] top-[40%] right-[8%] lg:right-auto lg:top-[calc(45%+90px)] lg:right-[calc(12%-90px)]" 
                 style={{ animation: 'floatC 7s ease-in-out infinite' }} 
               />
@@ -197,7 +203,7 @@ const Telas = () => {
           {starredItem && (
             <div className="col-span-2 row-span-2 aspect-square md:aspect-auto bg-[#1a1a1a] border-2 border-black/5 rounded-tl-[3rem] md:rounded-tl-[6rem] rounded-br-[3rem] md:rounded-br-[6rem] rounded-tr-[1rem] md:rounded-tr-[1.5rem] rounded-bl-[1rem] md:rounded-bl-[1.5rem] shadow-[6px_6px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-3 md:p-10 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate md:min-h-[500px] lg:min-h-[600px]">
               {starredItem.image ? (
-                <img src={starredItem.image} alt={starredItem.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={starredItem.image} alt={starredItem.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               ) : (
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border-4 border-dashed border-white/10 mb-2 md:mb-6 flex items-center justify-center animate-spin-slow">
@@ -223,7 +229,7 @@ const Telas = () => {
               }`}
             >
               {item.image ? (
-                <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-8 h-8 md:w-12 md:h-12 bg-white/5 rounded-lg md:rounded-2xl" />

@@ -62,6 +62,8 @@ const Sobre = () => {
             <img
               src={sobreShape}
               alt="Sobre Shape"
+              loading="eager"
+              fetchPriority="high"
               className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full object-contain object-top z-10 scale-[0.86] origin-top"
             />
 
@@ -76,6 +78,7 @@ const Sobre = () => {
                 <img
                   src={star}
                   alt=""
+                  loading="lazy"
                   className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-16 top-0 w-48 h-48 opacity-10 brightness-0 invert pointer-events-none z-0 rotate-12"
                 />
                 <p className="relative z-10 text-xl font-medium font-outfit text-black/60 mb-4 italic">Olá, eu sou o Alvaro,</p>
@@ -161,7 +164,7 @@ const Sobre = () => {
                 {/* Mobile Photo (beside title) */}
                 <div className="md:hidden w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-[#1a1a1a] border-2 border-black rounded-tl-[1.5rem] rounded-br-[1.5rem] rounded-tr-[0.5rem] rounded-bl-[0.5rem] shadow-[4px_4px_0_0_black] overflow-hidden relative">
                   {photos.photo1 ? (
-                    <img src={photos.photo1} alt="Sobre Alvaro 1" className="w-full h-full object-cover" />
+                    <img src={photos.photo1} alt="Sobre Alvaro 1" loading="lazy" className="w-full h-full object-cover" />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-6 h-6 rounded-full border-2 border-dashed border-white/20 animate-spin-slow" />
@@ -176,7 +179,7 @@ const Sobre = () => {
             <div className="flex-1 w-full min-h-[300px] hidden md:block">
               <div className="w-full h-full bg-[#1a1a1a] border-2 border-black rounded-tl-[5rem] rounded-br-[5rem] rounded-tr-[1.5rem] rounded-bl-[1.5rem] shadow-[12px_12px_0_0_black] overflow-hidden relative group transition-transform hover:-translate-y-1 duration-300 min-h-[350px]">
                 {photos.photo1 ? (
-                  <img src={photos.photo1} alt="Sobre Alvaro 1" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={photos.photo1} alt="Sobre Alvaro 1" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full border-4 border-dashed border-white/10 flex items-center justify-center animate-spin-slow">
@@ -201,7 +204,7 @@ const Sobre = () => {
                 {/* Mobile Photo (beside title) */}
                 <div className="md:hidden w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-[#1a1a1a] border-2 border-black rounded-tr-[1.5rem] rounded-bl-[1.5rem] rounded-tl-[0.5rem] rounded-br-[0.5rem] shadow-[4px_4px_0_0_black] overflow-hidden relative">
                   {photos.photo2 ? (
-                    <img src={photos.photo2} alt="Sobre Alvaro 2" className="w-full h-full object-cover" />
+                    <img src={photos.photo2} alt="Sobre Alvaro 2" loading="lazy" className="w-full h-full object-cover" />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-6 h-6 rounded-full border-2 border-dashed border-white/20 animate-spin-slow" />
@@ -221,7 +224,7 @@ const Sobre = () => {
             <div className="flex-1 w-full min-h-[300px] hidden md:block">
               <div className="w-full h-full bg-[#1a1a1a] border-2 border-black rounded-tr-[5rem] rounded-bl-[5rem] rounded-tl-[1.5rem] rounded-br-[1.5rem] shadow-[12px_12px_0_0_black] overflow-hidden relative group transition-transform hover:-translate-y-1 duration-300 min-h-[350px]">
                 {photos.photo2 ? (
-                  <img src={photos.photo2} alt="Sobre Alvaro 2" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={photos.photo2} alt="Sobre Alvaro 2" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full border-4 border-dashed border-white/10 flex items-center justify-center animate-spin-slow">

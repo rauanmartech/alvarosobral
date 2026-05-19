@@ -93,6 +93,7 @@ const Tattoo = () => {
                 <img 
                   src={star} 
                   alt="" 
+                  loading="lazy"
                   className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-20 top-1/2 -translate-y-1/2 w-56 h-56 opacity-20 brightness-0 invert pointer-events-none z-0 rotate-12"
                 />
                 <h1 className="relative z-10 text-6xl md:text-8xl font-black font-syne mb-6 leading-[0.9] text-white uppercase">
@@ -146,6 +147,8 @@ const Tattoo = () => {
               <img 
                 src={tattooShape} 
                 alt="Tattoo Shape" 
+                loading="eager"
+                fetchPriority="high"
                 className="relative z-10 w-full max-w-[260px] md:max-w-none h-auto object-contain object-center lg:object-top"
                 style={{ maxHeight: '100%' }}
               />
@@ -154,18 +157,21 @@ const Tattoo = () => {
               <img
                 src={blobFace}
                 alt=""
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[50px] md:w-[80px] top-[10%] left-[8%] lg:left-auto lg:right-[80%]"
                 style={{ animation: 'floatA 5s ease-in-out infinite' }}
               />
               <img
                 src={blobTattoo}
                 alt=""
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[45px] md:w-[70px] bottom-[15%] left-[12%] lg:left-auto lg:right-[70%]"
                 style={{ animation: 'floatB 6s ease-in-out infinite' }}
               />
               <img
                 src={blobPaint}
                 alt=""
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[40px] md:w-[60px] top-[20%] right-[10%]"
                 style={{ animation: 'floatC 7s ease-in-out infinite' }}
               />
@@ -200,7 +206,7 @@ const Tattoo = () => {
           {starredItem && (
             <div className="col-span-2 row-span-2 aspect-square md:aspect-auto bg-[#1a1a1a] border-2 border-black/5 rounded-tl-[3rem] md:rounded-tl-[6rem] rounded-br-[3rem] md:rounded-br-[6rem] rounded-tr-[1rem] md:rounded-tr-[1.5rem] rounded-bl-[1rem] md:rounded-bl-[1.5rem] shadow-[6px_6px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-3 md:p-10 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate md:min-h-[500px] lg:min-h-[600px]">
               {starredItem.image ? (
-                <img src={starredItem.image} alt={starredItem.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <img src={starredItem.image} alt={starredItem.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               ) : (
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border-4 border-dashed border-white/10 mb-2 md:mb-6 flex items-center justify-center animate-spin-slow">
@@ -230,7 +236,7 @@ const Tattoo = () => {
                 }`}
               >
                 {item.image ? (
-                  <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-8 h-8 md:w-12 md:h-12 bg-white/5 rounded-lg md:rounded-2xl" />

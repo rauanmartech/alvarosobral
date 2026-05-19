@@ -144,6 +144,7 @@ const Index = () => {
                 <img
                   src={tattooImg}
                   alt="Tattoo"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -170,6 +171,7 @@ const Index = () => {
                 <img
                   src={muralImg}
                   alt="Graffiti / Mural"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -196,6 +198,7 @@ const Index = () => {
                 <img
                   src={telasImg}
                   alt="Telas"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -222,6 +225,7 @@ const Index = () => {
                 <img
                   src={digitalImg}
                   alt="Ilustrações Digitais"
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -265,6 +269,7 @@ const Index = () => {
                     key={activeArea}
                     src={blobMap[activeArea as keyof typeof blobMap]}
                     alt=""
+                    loading="lazy"
                     className="w-32 h-32 md:w-[130px] md:h-[130px] animate-blob-pop object-contain block"
                   />
                 </div>
@@ -431,7 +436,7 @@ const Index = () => {
         {/* Mobile-only section separator */}
         <div className="flex lg:hidden items-center justify-center w-full my-6 px-4">
           <div className="flex-1 h-[2px] bg-black/10" />
-          <img src={starImg} alt="" className="w-8 h-8 mx-4 opacity-40 shrink-0 animate-spin-slow" />
+          <img src={starImg} alt="" loading="lazy" className="w-8 h-8 mx-4 opacity-40 shrink-0 animate-spin-slow" />
           <div className="flex-1 h-[2px] bg-black/10" />
         </div>
 
@@ -459,6 +464,7 @@ const Index = () => {
               <img
                 src={blobFace}
                 alt=""
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[50px] md:w-[70px] top-[8%] left-[8%] md:left-[15%]"
                 style={{
                   animation: 'floatA 5s ease-in-out infinite',
@@ -467,6 +473,7 @@ const Index = () => {
               <img
                 src={blobPaint}
                 alt=""
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[45px] md:w-[60px] top-[12%] right-[8%] md:right-[15%]"
                 style={{
                   animation: 'floatB 6s ease-in-out infinite',
@@ -475,6 +482,7 @@ const Index = () => {
               <img
                 src={blobSpray}
                 alt=""
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[50px] md:w-[65px] bottom-[18%] left-[6%] md:left-[10%]"
                 style={{
                   animation: 'floatC 7s ease-in-out infinite',
@@ -483,6 +491,7 @@ const Index = () => {
               <img
                 src={blobTattoo}
                 alt=""
+                loading="lazy"
                 className="absolute z-30 pointer-events-none select-none w-[45px] md:w-[60px] bottom-[14%] right-[6%] md:right-[10%]"
                 style={{
                   animation: 'floatA 8s ease-in-out infinite reverse',
@@ -496,6 +505,7 @@ const Index = () => {
               <img
                 src={alvaro2}
                 alt="Bora fazer arte?"
+                loading="lazy"
                 className="relative z-10 w-full max-w-[280px] md:max-w-md h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
               />
             </div>

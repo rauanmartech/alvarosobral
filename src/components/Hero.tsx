@@ -67,6 +67,8 @@ const Hero: React.FC = () => {
           <img
             src={fotoTransparente}
             alt="Álvaro"
+            loading="eager"
+            fetchPriority="high"
             className="
               w-auto object-contain object-bottom drop-shadow-2xl
               h-[calc(100vh-266px)]
