@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
     ">
       {/* Background Artistic Text - behind photo on mobile (z-[2] < photo z-10) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] md:z-0 select-none pointer-events-none opacity-[0.03] whitespace-nowrap">
-        <h2 className="text-[28vw] font-black uppercase leading-none font-syne tracking-tighter">
+        <h2 className="text-[28vw] font-black uppercase leading-none font-outfit tracking-tighter">
           ALVARO
         </h2>
       </div>
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
         <h1 className="
           text-[3rem] leading-[1.1]
           md:text-8xl md:leading-[0.95]
-          font-extrabold font-syne tracking-tight
+          font-extrabold font-outfit tracking-tight
         ">
           Eu sou <span className="text-[hsl(var(--accent-orange))]">Álvaro</span>,<br />
           Seu Multiartista

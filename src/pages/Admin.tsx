@@ -453,7 +453,7 @@ const Admin = () => {
           <div className="w-16 h-16 rounded-full border-4 border-dashed border-black mb-4 animate-spin flex items-center justify-center">
             <div className="w-8 h-8 bg-[hsl(var(--accent-orange))] rounded-full opacity-60" />
           </div>
-          <p className="font-syne font-black text-black uppercase tracking-wider text-sm animate-pulse">
+          <p className="font-outfit font-black text-black uppercase tracking-wider text-sm animate-pulse">
             Verificando credenciais...
           </p>
         </div>
@@ -469,7 +469,7 @@ const Admin = () => {
           {/* Header Dashboard */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12 border-b border-black/5 pb-8">
             <div className="w-full md:w-auto">
-              <h1 className="text-4xl font-black font-syne uppercase tracking-tight text-black flex items-center justify-center md:justify-start gap-3 w-full text-center md:text-left">
+              <h1 className="text-4xl font-black font-outfit uppercase tracking-tight text-black flex items-center justify-center md:justify-start gap-3 w-full text-center md:text-left">
                 Painel <span className="text-[hsl(var(--accent-orange))]">Geral</span>
               </h1>
               <p className="text-sm font-medium text-black/50 font-outfit mt-1 text-center md:text-left">
@@ -497,7 +497,7 @@ const Admin = () => {
             {/* Sidebar menu */}
             <aside className="w-full lg:w-64 shrink-0 space-y-2">
               <div className="bg-white border-4 border-black p-4 rounded-3xl shadow-[6px_6px_0_0_black]">
-                <p className="text-xs font-black uppercase tracking-widest text-black/40 px-3 mb-3 font-syne">Portfólios</p>
+                <p className="text-xs font-black uppercase tracking-widest text-black/40 px-3 mb-3 font-outfit">Portfólios</p>
                 <nav className="space-y-1">
                   {[
                     { id: "tattoo", label: "Tatuagens", icon: Scissors },
@@ -510,7 +510,7 @@ const Admin = () => {
                       <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id as any)}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold font-syne text-sm transition-all border-2 ${
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold font-outfit text-sm transition-all border-2 ${
                           activeTab === tab.id 
                             ? "bg-[hsl(var(--accent-orange))] text-white border-black shadow-[3px_3px_0_0_black]" 
                             : "bg-transparent text-black/60 border-transparent hover:bg-black/5 hover:text-black"
@@ -525,7 +525,7 @@ const Admin = () => {
 
                 <div className="h-[1px] bg-black/5 my-4" />
                 
-                <p className="text-xs font-black uppercase tracking-widest text-black/40 px-3 mb-3 font-syne">Configurações</p>
+                <p className="text-xs font-black uppercase tracking-widest text-black/40 px-3 mb-3 font-outfit">Configurações</p>
                 <nav className="space-y-1">
                   {[
                     { id: "faq", label: "Perguntas FAQ", icon: HelpCircle },
@@ -536,7 +536,7 @@ const Admin = () => {
                       <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id as any)}
-                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold font-syne text-sm transition-all border-2 ${
+                        className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold font-outfit text-sm transition-all border-2 ${
                           activeTab === tab.id 
                             ? "bg-[hsl(var(--accent-orange))] text-white border-black shadow-[3px_3px_0_0_black]" 
                             : "bg-transparent text-black/60 border-transparent hover:bg-black/5 hover:text-black"
@@ -559,10 +559,10 @@ const Admin = () => {
                 <div className="space-y-8 animate-in fade-in duration-200">
                   <div className="bg-white border-4 border-black p-6 md:p-8 rounded-3xl shadow-[8px_8px_0_0_black]">
                     <div className="flex justify-between items-center mb-6">
-                      <h2 className="text-2xl font-black font-syne uppercase tracking-tight text-black">
+                      <h2 className="text-2xl font-black font-outfit uppercase tracking-tight text-black">
                         ADICIONAR À COLEÇÃO DE <span className="text-[hsl(var(--accent-orange))]">{activeTab === "tattoo" ? "TATTOO" : activeTab === "graffiti" ? "GRAFFITI" : activeTab === "telas" ? "TELAS" : "ILUSTRAÇÕES"}</span>
                       </h2>
-                      <span className="bg-black/5 border border-black/10 px-3 py-1 rounded-full text-xs font-black uppercase font-syne">
+                      <span className="bg-black/5 border border-black/10 px-3 py-1 rounded-full text-xs font-black uppercase font-outfit">
                         {getActiveList().length} / 12 Itens
                       </span>
                     </div>
@@ -570,7 +570,7 @@ const Admin = () => {
                     <form onSubmit={handleAddArtwork} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-4">
                         <div className="space-y-2">
-                          <label className="block text-xs font-black uppercase tracking-widest text-black font-syne">Título / Legenda</label>
+                          <label className="block text-xs font-black uppercase tracking-widest text-black font-outfit">Título / Legenda</label>
                           <input 
                             type="text" 
                             value={newTitle}
@@ -581,7 +581,7 @@ const Admin = () => {
                         </div>
                         
                         <div className="space-y-2">
-                          <label className="block text-xs font-black uppercase tracking-widest text-black font-syne">URL da Imagem (Opcional)</label>
+                          <label className="block text-xs font-black uppercase tracking-widest text-black font-outfit">URL da Imagem (Opcional)</label>
                           <input 
                             type="text" 
                             value={newImage}
@@ -594,7 +594,7 @@ const Admin = () => {
 
                       <div className="space-y-4 flex flex-col justify-between">
                         <div className="space-y-2">
-                          <label className="block text-xs font-black uppercase tracking-widest text-black font-syne">Ou Upload de Arquivo</label>
+                          <label className="block text-xs font-black uppercase tracking-widest text-black font-outfit">Ou Upload de Arquivo</label>
                           <div className="relative border-2 border-dashed border-black/30 hover:border-black rounded-xl p-6 flex flex-col items-center justify-center cursor-pointer bg-[#fafafa] transition-all min-h-[140px] overflow-hidden group">
                             {uploadingImage ? (
                               <div className="flex flex-col items-center">
@@ -643,11 +643,11 @@ const Admin = () => {
 
                   {/* List of current artworks */}
                   <div className="bg-white border-4 border-black p-6 md:p-8 rounded-3xl shadow-[8px_8px_0_0_black]">
-                    <h3 className="text-xl font-black font-syne uppercase tracking-tight text-black mb-6">Obras Cadastradas</h3>
+                    <h3 className="text-xl font-black font-outfit uppercase tracking-tight text-black mb-6">Obras Cadastradas</h3>
                     
                     {getActiveList().length === 0 ? (
                       <div className="text-center py-12 bg-[#fafafa] border-2 border-dashed border-black/10 rounded-2xl">
-                        <p className="text-black/40 font-bold font-syne">Nenhuma obra cadastrada ainda.</p>
+                        <p className="text-black/40 font-bold font-outfit">Nenhuma obra cadastrada ainda.</p>
                       </div>
                     ) : (
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -790,13 +790,13 @@ const Admin = () => {
               {activeTab === "faq" && (
                 <div className="space-y-8 animate-in fade-in duration-200">
                   <div className="bg-white border-4 border-black p-6 md:p-8 rounded-3xl shadow-[8px_8px_0_0_black]">
-                    <h2 className="text-2xl font-black font-syne uppercase tracking-tight text-black mb-6">
+                    <h2 className="text-2xl font-black font-outfit uppercase tracking-tight text-black mb-6">
                       ADICIONAR PERGUNTA AO <span className="text-[hsl(var(--accent-orange))]">FAQ</span>
                     </h2>
                     
                     <form onSubmit={handleAddFAQ} className="space-y-6">
                       <div className="space-y-2">
-                        <label className="block text-xs font-black uppercase tracking-widest text-black font-syne">Pergunta</label>
+                        <label className="block text-xs font-black uppercase tracking-widest text-black font-outfit">Pergunta</label>
                         <input 
                           type="text" 
                           value={newFAQQuestion}
@@ -808,7 +808,7 @@ const Admin = () => {
                       </div>
                       
                       <div className="space-y-2">
-                        <label className="block text-xs font-black uppercase tracking-widest text-black font-syne">Resposta</label>
+                        <label className="block text-xs font-black uppercase tracking-widest text-black font-outfit">Resposta</label>
                         <textarea 
                           value={newFAQAnswer}
                           onChange={(e) => setNewFAQAnswer(e.target.value)}
@@ -829,18 +829,18 @@ const Admin = () => {
                   </div>
 
                   <div className="bg-white border-4 border-black p-6 md:p-8 rounded-3xl shadow-[8px_8px_0_0_black]">
-                    <h3 className="text-xl font-black font-syne uppercase tracking-tight text-black mb-6 font-syne">Dúvidas Cadastradas</h3>
+                    <h3 className="text-xl font-black font-outfit uppercase tracking-tight text-black mb-6 font-outfit">Dúvidas Cadastradas</h3>
                     
                     {faqs.length === 0 ? (
                       <div className="text-center py-12 bg-[#fafafa] border-2 border-dashed border-black/10 rounded-2xl">
-                        <p className="text-black/40 font-bold font-syne">Nenhuma pergunta cadastrada.</p>
+                        <p className="text-black/40 font-bold font-outfit">Nenhuma pergunta cadastrada.</p>
                       </div>
                     ) : (
                       <div className="space-y-4">
                         {faqs.map((faq, index) => (
                           <div key={index} className="border-2 border-black bg-[#fafafa] rounded-2xl p-5 shadow-[4px_4px_0_0_black] flex justify-between items-start gap-4">
                             <div className="space-y-2">
-                              <h4 className="font-bold text-black text-lg font-syne uppercase">{faq.q}</h4>
+                              <h4 className="font-bold text-black text-lg font-outfit uppercase">{faq.q}</h4>
                               <p className="text-black/60 font-outfit text-sm leading-relaxed">{faq.a}</p>
                             </div>
                             <button
@@ -861,7 +861,7 @@ const Admin = () => {
               {/* SOBRE TAB EDITING */}
               {activeTab === "sobre" && (
                 <div className="bg-white border-4 border-black p-6 md:p-8 rounded-3xl shadow-[8px_8px_0_0_black] animate-in fade-in duration-200">
-                  <h2 className="text-2xl font-black font-syne uppercase tracking-tight text-black mb-6">
+                  <h2 className="text-2xl font-black font-outfit uppercase tracking-tight text-black mb-6">
                     EDITAR FOTOS DO <span className="text-[hsl(var(--accent-orange))]">SOBRE / BIOGRAFIA</span>
                   </h2>
 
@@ -870,7 +870,7 @@ const Admin = () => {
                     {/* First Photo */}
                     <div className="border-2 border-black bg-[#fafafa] rounded-2xl p-6 flex flex-col justify-between gap-6 shadow-[4px_4px_0_0_black]">
                       <div>
-                        <h3 className="font-bold text-lg text-black font-syne uppercase mb-2">Primeira Foto (Principal)</h3>
+                        <h3 className="font-bold text-lg text-black font-outfit uppercase mb-2">Primeira Foto (Principal)</h3>
                         <p className="text-xs text-black/50 font-outfit mb-4">Esta foto aparece em destaque na primeira dobra da biografia.</p>
                       </div>
 
@@ -908,7 +908,7 @@ const Admin = () => {
                     {/* Second Photo */}
                     <div className="border-2 border-black bg-[#fafafa] rounded-2xl p-6 flex flex-col justify-between gap-6 shadow-[4px_4px_0_0_black]">
                       <div>
-                        <h3 className="font-bold text-lg text-black font-syne uppercase mb-2">Segunda Foto (Secundária)</h3>
+                        <h3 className="font-bold text-lg text-black font-outfit uppercase mb-2">Segunda Foto (Secundária)</h3>
                         <p className="text-xs text-black/50 font-outfit mb-4">Esta foto aparece mais abaixo no manifesto ou rodapé da biografia.</p>
                       </div>
 

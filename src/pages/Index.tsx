@@ -121,7 +121,7 @@ const Index = () => {
 
           {/* Section Header */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left md:flex-row md:justify-between mb-12 gap-6">
-            <h2 className="text-4xl md:text-5xl font-black font-syne leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black font-outfit leading-tight">
               <span className="text-white">Meus </span>
               <span className="text-[hsl(var(--accent-orange))]">Trabalhos</span>
             </h2>
@@ -273,7 +273,7 @@ const Index = () => {
                     className="w-32 h-32 md:w-[130px] md:h-[130px] animate-blob-pop object-contain block"
                   />
                 </div>
-                <h2 className="relative z-10 text-4xl md:text-5xl font-black uppercase tracking-tight font-syne w-full text-center lg:text-left">
+                <h2 className="relative z-10 text-4xl md:text-5xl font-black uppercase tracking-tight font-outfit w-full text-center lg:text-left">
                   Arte <br />
                   <span className="text-[hsl(var(--accent-orange))]">
                     {displayText}
@@ -512,7 +512,7 @@ const Index = () => {
 
             {/* Right Content Side */}
             <div className="flex-1 px-2 lg:px-0 text-center lg:text-left">
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-black font-syne mb-6 md:mb-8 leading-tight uppercase">
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-black font-outfit mb-6 md:mb-8 leading-tight uppercase">
                 Bora fazer <br />
                 <span className="text-[hsl(var(--accent-orange))]">arte comigo?</span>
               </h2>

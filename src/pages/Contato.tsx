@@ -159,7 +159,7 @@ const Contato = () => {
           <div className="w-full lg:w-2/3 space-y-10 text-center lg:text-left flex flex-col items-center lg:items-start">
             <div className="space-y-6 flex flex-col items-center lg:items-start w-full">
               {/* Badge */}
-              <div className="inline-flex items-center gap-3 px-6 py-2.5 bg-white border-2 border-black rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm shadow-[4px_4px_0_0_black] -rotate-1 font-syne">
+              <div className="inline-flex items-center gap-3 px-6 py-2.5 bg-white border-2 border-black rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm shadow-[4px_4px_0_0_black] -rotate-1 font-outfit">
                 <div className="w-5 h-5 rounded-full bg-[hsl(var(--accent-orange))] border border-black flex items-center justify-center text-white shrink-0">
                   <Star size={8} fill="currentColor" />
                 </div>
@@ -167,7 +167,7 @@ const Contato = () => {
               </div>
 
               {/* Title */}
-              <h1 className="text-5xl md:text-6xl lg:text-8xl font-black font-syne leading-[1.0] lg:leading-[0.85] text-black tracking-tighter uppercase flex flex-col gap-2 lg:gap-0 w-full text-center lg:text-left">
+              <h1 className="text-5xl md:text-6xl lg:text-8xl font-black font-outfit leading-[1.0] lg:leading-[0.85] text-black tracking-tighter uppercase flex flex-col gap-2 lg:gap-0 w-full text-center lg:text-left">
                 <span>Transforme</span>
                 <span className="text-[hsl(var(--accent-orange))]">visão em arte</span>
               </h1>
@@ -255,7 +255,7 @@ const Contato = () => {
             <span className="text-[10px] uppercase font-black tracking-[0.2em] text-[hsl(var(--accent-orange))] mb-4">Arte que inspira</span>
             
             <div className="relative">
-              <h2 className="text-3xl md:text-4xl font-black font-syne text-center min-h-[60px] flex items-center justify-center">
+              <h2 className="text-3xl md:text-4xl font-black font-outfit text-center min-h-[60px] flex items-center justify-center">
                 {displayText}
                 <span className="w-1 h-8 bg-[hsl(var(--accent-orange))] ml-2 cursor-blink" />
               </h2>

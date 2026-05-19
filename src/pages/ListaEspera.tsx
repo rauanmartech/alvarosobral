@@ -39,9 +39,9 @@ const ListaEspera = () => {
             />
             <div className="inline-flex items-center gap-3 px-6 py-2 bg-white border-2 border-black rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm mb-6 shadow-[4px_4px_0_0_black] -rotate-2 relative z-10">
               <div className="w-2 h-2 bg-[hsl(var(--accent-orange))] rounded-full" />
-              <span className="text-black text-[10px] font-black uppercase tracking-[0.2em] font-syne">Lista de Espera</span>
+              <span className="text-black text-[10px] font-black uppercase tracking-[0.2em] font-outfit">Lista de Espera</span>
             </div>
-            <h1 className="relative z-10 text-5xl md:text-7xl font-black font-syne leading-tight text-black uppercase">
+            <h1 className="relative z-10 text-5xl md:text-7xl font-black font-outfit leading-tight text-black uppercase">
               Lista de <br />
               <span className="text-[hsl(var(--accent-orange))]">Espera</span>
             </h1>
@@ -59,7 +59,7 @@ const ListaEspera = () => {
               
               {/* E-mail */}
               <div className="space-y-3">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   E-mail <span className="text-[hsl(var(--accent-orange)) text-xl">*</span>
                 </label>
                 <input 
@@ -73,7 +73,7 @@ const ListaEspera = () => {
 
               {/* Nome Completo */}
               <div className="space-y-3">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   Nome Completo <span className="text-[hsl(var(--accent-orange)) text-xl">*</span>
                 </label>
                 <input 
@@ -87,7 +87,7 @@ const ListaEspera = () => {
 
               {/* Idade */}
               <div className="space-y-3">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   Idade
                 </label>
                 <input 
@@ -100,7 +100,7 @@ const ListaEspera = () => {
 
               {/* Telefone / WhatsApp */}
               <div className="space-y-3">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   Telefone com WhatsApp <span className="text-[hsl(var(--accent-orange)) text-xl">*</span>
                 </label>
                 <input 
@@ -114,7 +114,7 @@ const ListaEspera = () => {
 
               {/* Instagram */}
               <div className="space-y-3">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   Instagram
                 </label>
                 <div className="relative">
@@ -130,7 +130,7 @@ const ListaEspera = () => {
 
               {/* Cidade */}
               <div className="space-y-3">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   Cidade onde mora <span className="text-[hsl(var(--accent-orange)) text-xl">*</span>
                 </label>
                 <select 
@@ -148,7 +148,7 @@ const ListaEspera = () => {
 
               {/* Já se tatuou? */}
               <div className="md:col-span-2 space-y-4 pt-4">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   Já se tatuou comigo? <span className="text-[hsl(var(--accent-orange)) text-xl">*</span>
                 </label>
                 <div className="flex flex-wrap gap-4">
@@ -162,7 +162,7 @@ const ListaEspera = () => {
                         className="peer hidden"
                         onChange={(e) => setFormData({...formData, jaTatuou: e.target.value})}
                       />
-                      <div className="w-full py-4 text-center border-2 border-black rounded-2xl font-black font-syne uppercase text-xs transition-all peer-checked:bg-[hsl(var(--accent-orange))] peer-checked:text-white peer-checked:shadow-none shadow-[4px_4px_0_0_black] hover:-translate-y-1 bg-[#fafafa]">
+                      <div className="w-full py-4 text-center border-2 border-black rounded-2xl font-black font-outfit uppercase text-xs transition-all peer-checked:bg-[hsl(var(--accent-orange))] peer-checked:text-white peer-checked:shadow-none shadow-[4px_4px_0_0_black] hover:-translate-y-1 bg-[#fafafa]">
                         {option}
                       </div>
                     </label>
@@ -172,7 +172,7 @@ const ListaEspera = () => {
 
               {/* Orçamento? */}
               <div className="md:col-span-2 space-y-4 pt-4">
-                <label className="block text-sm font-black font-syne uppercase tracking-wider text-black">
+                <label className="block text-sm font-black font-outfit uppercase tracking-wider text-black">
                   Deseja fazer o orçamento do seu projeto? <span className="text-[hsl(var(--accent-orange)) text-xl">*</span>
                 </label>
                 <div className="flex flex-col gap-3">
@@ -189,7 +189,7 @@ const ListaEspera = () => {
                         className="peer hidden"
                         onChange={(e) => setFormData({...formData, orcamento: e.target.value})}
                       />
-                      <div className="w-full px-6 py-4 border-2 border-black rounded-2xl font-black font-syne uppercase text-xs transition-all peer-checked:bg-[#1a1a1a] peer-checked:text-white peer-checked:shadow-none shadow-[4px_4px_0_0_black] hover:translate-x-1 bg-[#fafafa] text-left">
+                      <div className="w-full px-6 py-4 border-2 border-black rounded-2xl font-black font-outfit uppercase text-xs transition-all peer-checked:bg-[#1a1a1a] peer-checked:text-white peer-checked:shadow-none shadow-[4px_4px_0_0_black] hover:translate-x-1 bg-[#fafafa] text-left">
                         {option.label}
                       </div>
                     </label>

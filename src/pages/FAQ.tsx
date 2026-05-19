@@ -109,7 +109,7 @@ const FAQ = () => {
                   value={`item-${i}`}
                   className="bg-white border-2 border-black rounded-[2rem] shadow-[6px_6px_0_0_black] px-4 md:px-8 overflow-hidden data-[state=open]:shadow-none data-[state=open]:translate-x-[2px] data-[state=open]:translate-y-[2px] transition-all"
                 >
-                  <AccordionTrigger className="hover:no-underline py-6 text-left font-syne font-black text-lg md:text-xl uppercase group">
+                  <AccordionTrigger className="hover:no-underline py-6 text-left font-outfit font-black text-lg md:text-xl uppercase group">
                     <span className="group-data-[state=open]:text-[hsl(var(--accent-orange))] transition-colors">{faq.q}</span>
                   </AccordionTrigger>
                   <AccordionContent className="pb-8 text-black/60 font-outfit text-lg leading-relaxed border-t border-black/5 pt-4">

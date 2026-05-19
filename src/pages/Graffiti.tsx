@@ -94,7 +94,7 @@ const Graffiti = () => {
                   loading="lazy"
                   className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-20 top-1/2 -translate-y-1/2 w-56 h-56 opacity-20 brightness-0 invert pointer-events-none z-0 rotate-12"
                 />
-                <h1 className="relative z-10 text-6xl md:text-8xl font-black font-syne mb-6 leading-[0.9] text-white uppercase">
+                <h1 className="relative z-10 text-6xl md:text-8xl font-black font-outfit mb-6 leading-[0.9] text-white uppercase">
                   VOZ DAS <br />
                   <span className="text-[hsl(var(--accent-orange))]">RUAS</span>
                 </h1>
@@ -110,14 +110,14 @@ const Graffiti = () => {
                 <div className="bg-white/5 border-2 border-dashed border-white/20 px-6 h-20 rounded-2xl flex flex-col justify-center min-w-[180px] w-full md:w-auto relative group overflow-hidden">
                   <div className="absolute top-0 left-0 w-1 h-full bg-[hsl(var(--accent-orange))] opacity-50" />
                   <p className="text-white/30 text-[10px] font-black uppercase tracking-widest mb-1">Técnica</p>
-                  <p className="text-white font-bold font-syne">Spray & Muralismo</p>
+                  <p className="text-white font-bold font-outfit">Spray & Muralismo</p>
                 </div>
                 
                 {/* Info Card 2 */}
                 <div className="bg-white/5 border-2 border-dashed border-white/20 px-6 h-20 rounded-2xl flex flex-col justify-center min-w-[180px] w-full md:w-auto relative group overflow-hidden">
                   <div className="absolute top-0 left-0 w-1 h-full bg-[hsl(var(--accent-orange))] opacity-50" />
                   <p className="text-white/30 text-[10px] font-black uppercase tracking-widest mb-1">Alcance</p>
-                  <p className="text-white font-bold font-syne">Projetos Nacionais</p>
+                  <p className="text-white font-bold font-outfit">Projetos Nacionais</p>
                 </div>
 
                 {/* Primary Action Button - Stays Pop Art */}

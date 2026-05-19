@@ -70,12 +70,12 @@ const Login = () => {
         <div className="relative w-full max-w-md bg-white border-4 border-black p-8 md:p-10 rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-[1rem] rounded-bl-[1rem] shadow-[12px_12px_0_0_black] z-10 transition-transform duration-300 hover:-translate-y-1">
           
           {/* Pop-art badge */}
-          <div className="absolute -top-6 left-8 bg-[hsl(var(--accent-orange))] text-white border-2 border-black px-6 py-2 rounded-full font-black text-sm uppercase tracking-widest shadow-[4px_4px_0_0_black] -rotate-3 font-syne">
+          <div className="absolute -top-6 left-8 bg-[hsl(var(--accent-orange))] text-white border-2 border-black px-6 py-2 rounded-full font-black text-sm uppercase tracking-widest shadow-[4px_4px_0_0_black] -rotate-3 font-outfit">
             Acesso Restrito
           </div>
 
           <div className="text-center mt-4 mb-8">
-            <h1 className="text-4xl font-black font-syne uppercase tracking-tight text-black">
+            <h1 className="text-4xl font-black font-outfit uppercase tracking-tight text-black">
               ADMIN <span className="text-[hsl(var(--accent-orange))]">AREA</span>
             </h1>
             <p className="text-sm font-medium text-black/50 font-outfit mt-2">
@@ -93,7 +93,7 @@ const Login = () => {
           <form onSubmit={handleLogin} className="space-y-6">
             {/* Email Input */}
             <div className="space-y-2">
-              <label className="block text-xs font-black uppercase tracking-widest text-black font-syne">
+              <label className="block text-xs font-black uppercase tracking-widest text-black font-outfit">
                 E-mail
               </label>
               <div className="relative">
@@ -118,7 +118,7 @@ const Login = () => {
             {/* Password Input */}
             <div className="space-y-2">
               <div className="flex justify-between items-center">
-                <label className="block text-xs font-black uppercase tracking-widest text-black font-syne">
+                <label className="block text-xs font-black uppercase tracking-widest text-black font-outfit">
                   Senha
                 </label>
               </div>
