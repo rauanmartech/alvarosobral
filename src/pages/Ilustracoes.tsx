@@ -77,9 +77,10 @@ const Ilustracoes = () => {
       `}</style>
 
       {/* Banner Section */}
-      <section className="relative bg-[#1a1a1a] rounded-[3rem] mb-20 min-h-[600px] flex items-center overflow-hidden">
-        <div className="container mx-auto px-6 py-12 lg:py-0 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+      <div className="container mx-auto px-6 mb-20">
+        <section className="relative bg-[#1a1a1a] rounded-[3rem] min-h-[600px] flex items-center overflow-hidden">
+          <div className="w-full px-6 py-12 lg:py-0 lg:h-full lg:min-h-[600px] flex items-center relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-12 w-full">
             
             {/* Left Side: Content */}
             <div className="flex-1 z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -167,10 +168,10 @@ const Ilustracoes = () => {
                 style={{ animation: 'floatB 6s ease-in-out infinite' }} 
               />
             </div>
-
           </div>
         </div>
       </section>
+    </div>
 
       {/* Gallery Section */}
       <div className="container mx-auto px-6 pb-32">
