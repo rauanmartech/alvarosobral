@@ -14,6 +14,7 @@ import Contato from "./pages/Contato.tsx";
 import ListaEspera from "./pages/ListaEspera.tsx";
 import Login from "./pages/Login.tsx";
 import Admin from "./pages/Admin.tsx";
+import AdminCopy from "./pages/AdminCopy.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/lista-espera" element={<ListaEspera />} />
           <Route path="/login" element={<Login />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/copy" element={<AdminCopy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

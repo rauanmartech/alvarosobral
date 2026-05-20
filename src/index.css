@@ -99,3 +99,14 @@ All colors MUST be HSL.
     font-family: 'Alpha', sans-serif !important;
   }
 }
+
+/* Override 'Alpha' font for the Copy Editor to improve readability */
+.copy-admin-page h1,
+.copy-admin-page h2,
+.copy-admin-page h3,
+.copy-admin-page h4,
+.copy-admin-page h5,
+.copy-admin-page h6 {
+  font-family: 'Outfit', sans-serif !important;
+}
+

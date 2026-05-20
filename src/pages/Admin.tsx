@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { 
   ArrowLeft, Star, Trash2, Plus, Save, Image as ImageIcon, 
   HelpCircle, User as UserIcon, Paintbrush, Scissors, 
-  Monitor, LogOut, Check, Copy, Pencil, X
+  Monitor, LogOut, Check, Copy, Pencil, X, FileText
 } from "lucide-react";
 import { supabase } from "@/utils/supabase";
 
@@ -547,6 +547,14 @@ const Admin = () => {
                       </button>
                     );
                   })}
+                  
+                  <Link
+                    to="/admin/copy"
+                    className="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-bold font-outfit text-sm transition-all border-2 border-transparent bg-transparent text-black/60 hover:bg-black/5 hover:text-black mt-1"
+                  >
+                    <FileText size={18} />
+                    Copy do Site
+                  </Link>
                 </nav>
               </div>
             </aside>
