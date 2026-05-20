@@ -148,7 +148,7 @@ const Graffiti = () => {
                 alt="Graffiti Shape" 
                 loading="eager"
                 fetchPriority="high"
-                className="relative z-10 w-full max-w-[260px] md:max-w-none h-auto object-contain object-center lg:object-right"
+                className="relative z-10 w-full max-w-[260px] md:max-w-none h-auto object-contain object-center lg:object-right lg:scale-[0.8] lg:origin-right"
               />
 
               {/* Floating Blobs */}
