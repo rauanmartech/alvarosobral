@@ -116,8 +116,9 @@ const Index = () => {
       <Hero />
 
       {/* Works Section - Dark Theme */}
-      <section className="bg-[#1a1a1a] px-4 md:px-12 py-12 md:py-20 rounded-[1.5rem] md:rounded-[3rem]">
-        <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto px-6 mb-24">
+        <section className="bg-[#1a1a1a] px-4 md:px-12 py-12 md:py-20 rounded-[1.5rem] md:rounded-[3rem]">
+          <div className="max-w-6xl mx-auto">
 
           {/* Section Header */}
           <div className="flex flex-col items-center text-center md:items-start md:text-left md:flex-row md:justify-between mb-12 gap-6">
@@ -245,6 +246,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+    </div>
 
       <div className="container mx-auto px-6">
         {/* Intro / Sobre Section */}
