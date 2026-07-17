@@ -46,7 +46,7 @@ const ListaEspera = () => {
               <span className="text-[hsl(var(--accent-orange))]">Espera</span>
             </h1>
             <p className="mt-6 text-black/50 font-outfit max-w-lg mx-auto leading-relaxed">
-              Garanta seu lugar para as próximas sessões. Preencha os dados abaixo e entrarei em contato em breve.
+              Quer que eu tatue na sua cidade? Preencha os dados abaixo e registre seu interesse.
             </p>
           </div>
 

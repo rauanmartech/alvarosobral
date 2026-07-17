@@ -16,7 +16,7 @@ const PageLayout = ({ children }: PageLayoutProps) => {
       "/tattoo": "Tatuagens Exclusivas | Álvaro Sobral",
       "/graffiti": "Graffiti & Murais Urbanos | Álvaro Sobral",
       "/telas": "Telas & Belas Artes | Álvaro Sobral",
-      "/ilustracoes": "Ilustrações & Arte Digital | Álvaro Sobral",
+      "/diversos": "Diversos | Álvaro Sobral",
       "/sobre": "Sobre o Artista | Álvaro Sobral",
       "/faq": "Dúvidas Frequentes | FAQ | Álvaro Sobral",
       "/contato": "Contato & Orçamentos | Álvaro Sobral",

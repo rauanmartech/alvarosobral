@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/alvaro-logo.png";
+import logo from "@/assets/blobs/Álvaro Logo e Slogan.webp";
 
 const navLinks = [
   { to: "/", label: "Início" },
   { to: "/tattoo", label: "Tattoo" },
   { to: "/graffiti", label: "Graffiti" },
   { to: "/telas", label: "Telas" },
-  { to: "/ilustracoes", label: "Ilustrações" },
+  { to: "/diversos", label: "Diversos" },
   { to: "/sobre", label: "Sobre" },
   { to: "/faq", label: "FAQ" },
   { to: "/contato", label: "Contato" },
@@ -50,7 +50,7 @@ const Header = () => {
         {/* Center Logo */}
         <div className="flex items-center justify-center px-4">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Álvaro" className="h-8 md:h-8 w-auto min-w-[70px] md:min-w-[80px] object-contain" />
+            <img src={logo} alt="Álvaro" className="h-10 md:h-10 w-auto object-contain" />
           </Link>
         </div>
         

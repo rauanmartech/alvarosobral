@@ -12,11 +12,11 @@ import {
 } from "lucide-react";
 
 // Assets
-import alvaro2 from "@/assets/elements/alvaro2.png";
-import blobFace from "@/assets/blobs/face.png";
-import blobPaint from "@/assets/blobs/paint.png";
-import blobSpray from "@/assets/blobs/spray.png";
-import blobTattoo from "@/assets/blobs/tattoo.png";
+import alvaro2 from "@/assets/elements/alvaro2.webp";
+import blobFace from "@/assets/blobs/face.webp";
+import blobPaint from "@/assets/blobs/paint.webp";
+import blobSpray from "@/assets/blobs/spray.webp";
+import blobTattoo from "@/assets/blobs/tattoo.webp";
 
 // WhatsApp SVG Icon Component
 const WhatsAppIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
@@ -55,7 +55,7 @@ const Contato = () => {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const phrases = ["na pele", "na rua", "na tela", "no digital", "em todo lugar"];
+  const phrases = ["na pele", "na rua", "na tela", "arte onde você quiser"];
 
   // Cycle through phrases every 1.5s
   useEffect(() => {
@@ -138,8 +138,8 @@ const Contato = () => {
           <div className="w-full lg:w-1/3 flex flex-col items-center justify-center">
             <div className="relative w-full max-w-[380px] aspect-square flex items-center justify-center">
               {/* Background Decorative Elements */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] aspect-square bg-[hsl(var(--accent-orange))] rounded-full opacity-10 pointer-events-none" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] aspect-square border-2 border-dashed border-black rounded-full animate-spin-slow pointer-events-none" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] aspect-square bg-gradient-to-b from-orange-400 to-orange-600 rounded-full opacity-100 pointer-events-none" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] aspect-square border border-solid border-black rounded-full animate-spin-slow pointer-events-none" />
 
               {/* Floating Blobs */}
               <img src={blobFace} alt="" className="absolute z-10 w-16 -top-4 left-0" style={{ animation: 'floatA 5s ease-in-out infinite' }} />

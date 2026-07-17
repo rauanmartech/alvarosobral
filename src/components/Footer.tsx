@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
-import logo from "@/assets/alvaro-logo.png";
+import logo from "@/assets/blobs/Álvaro Logo e Slogan.webp";
 
 const Footer = () => (
   <footer className="border-t border-border bg-background py-12">
     <div className="container mx-auto px-4 space-y-8">
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-sm text-muted-foreground">
         <div className="flex flex-col items-center md:items-start space-y-4">
-          <img src={logo} alt="Álvaro" className="h-10 w-auto" />
-          <p className="max-w-xs text-center md:text-left">Transformando ideias em arte, da pele às telas.</p>
+          <img src={logo} alt="Álvaro" className="h-10 w-auto object-contain" />
+          <p className="max-w-xs text-center md:text-left">Arte onde você quiser</p>
           <p>hello@digitalagency.com</p>
         </div>
         <nav className="flex flex-wrap justify-center gap-4">
@@ -16,7 +16,7 @@ const Footer = () => (
             { to: "/tattoo", label: "Tattoo" },
             { to: "/graffiti", label: "Graffiti" },
             { to: "/telas", label: "Telas" },
-            { to: "/ilustracoes", label: "Ilustrações" },
+            { to: "/diversos", label: "Diversos" },
             { to: "/sobre", label: "Sobre" },
             { to: "/faq", label: "FAQ" },
             { to: "/contato", label: "Contato" },

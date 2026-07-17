@@ -1,5 +1,6 @@
 import React from 'react';
 import fotoTransparente from '@/assets/alvaro-foto-transparente.png';
+import logoWatermark from '@/assets/blobs/Álvaro Logo.webp';
 
 
 const Hero: React.FC = () => {
@@ -19,11 +20,9 @@ const Hero: React.FC = () => {
       h-[calc(100vh-128px)] min-h-[500px]
       md:h-[calc(100vh-50px)] md:min-h-[800px]
     ">
-      {/* Background Artistic Text - behind photo on mobile (z-[2] < photo z-10) */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2] md:z-0 select-none pointer-events-none opacity-[0.03] whitespace-nowrap">
-        <h2 className="text-[28vw] font-black uppercase leading-none font-outfit tracking-tighter">
-          ALVARO
-        </h2>
+      {/* Background Artistic Logo - behind photo on mobile (z-[2] < photo z-10) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full min-w-[100vw] z-[2] md:z-0 select-none pointer-events-none opacity-5 flex items-center justify-center overflow-hidden">
+        <img src={logoWatermark} alt="" className="w-full h-auto object-contain" />
       </div>
 
       {/* Main Title — mobile: absolute top-4; desktop: relative in flex flow */}
@@ -80,24 +79,23 @@ const Hero: React.FC = () => {
         {/* Buttons — smaller & tighter on mobile, always on one line */}
         <div className="absolute bottom-6 md:bottom-12 left-1/2 -translate-x-1/2 z-20 bg-white p-1 md:p-1.5 rounded-full flex items-center shadow-xl border-2 md:border-4 border-white w-max">
           <button className="bg-[hsl(var(--accent-orange))] text-white px-5 py-2 md:px-8 md:py-3 rounded-full font-black text-sm md:text-lg flex items-center gap-1.5 transition-all hover:brightness-110 active:scale-95 whitespace-nowrap shrink-0">
-            Portfolio <span className="text-base md:text-xl">↗</span>
+            Portfólio <span className="text-base md:text-xl">↗</span>
           </button>
           <button className="bg-white text-black px-5 py-2 md:px-8 md:py-3 rounded-full font-black text-sm md:text-lg border border-black/70 md:border-2 md:border-black/80 ml-1 md:ml-2 transition-all hover:bg-black/5 active:scale-95 whitespace-nowrap shrink-0">
-            Hire Me
+            Contratar
           </button>
         </div>
 
         {/* Side Stats - Desktop Only */}
-        <div className="absolute left-6 xl:left-12 bottom-20 hidden lg:flex flex-col gap-6 max-w-[180px] z-10 scale-90 xl:scale-100 origin-bottom-left">
+        <div className="absolute left-6 xl:left-12 bottom-20 hidden lg:flex flex-col gap-6 max-w-[220px] z-10 scale-90 xl:scale-100 origin-bottom-left">
           <div className="bg-white/40 backdrop-blur-md p-4 rounded-2xl border border-black/5 shadow-sm">
-            <span className="text-3xl font-black block mb-1">"</span>
-            <p className="text-xs font-semibold leading-relaxed italic text-black/60">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.
+            <span className="text-3xl font-black block mb-1 leading-none text-[hsl(var(--accent-orange))]">"</span>
+            <p className="text-xs font-semibold leading-relaxed italic text-black/60 mb-3">
+              Se você pudesse dizer em palavras, não haveria necessidade de pintar
             </p>
-          </div>
-          <div>
-            <p className="text-3xl font-black tracking-tighter">450+</p>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-black/40">Client Served</p>
+            <p className="text-[10px] font-bold uppercase tracking-widest text-black/40 text-right">
+              — Edward Hopper
+            </p>
           </div>
         </div>
 
@@ -108,8 +106,8 @@ const Hero: React.FC = () => {
             ))}
           </div>
           <div className="text-right">
-            <p className="text-3xl font-black tracking-tighter">10 Years</p>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-black/40">Experts</p>
+            <p className="text-3xl font-black tracking-tighter">+ 8 anos</p>
+            <p className="text-[10px] font-bold uppercase tracking-widest text-black/40">de experiência</p>
           </div>
         </div>
       </div>

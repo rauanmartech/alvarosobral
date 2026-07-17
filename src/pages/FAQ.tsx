@@ -124,11 +124,11 @@ const FAQ = () => {
           <div className="mt-24 text-center">
             <p className="text-black/30 font-black uppercase tracking-widest text-sm mb-6">Ainda tem dúvidas?</p>
             <a
-              href="https://wa.me/seunumero"
+              href="https://wa.me/556493180314"
               target="_blank"
               className="inline-flex items-center justify-center w-full md:w-auto gap-4 bg-black text-white px-10 py-5 rounded-full font-black font-alpha uppercase tracking-widest text-sm hover:bg-[hsl(var(--accent-orange))] transition-all shadow-[8px_8px_0_0_black]"
             >
-              Falar com Alvaro
+              Falar com Álvaro
             </a>
           </div>
 

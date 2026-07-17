@@ -6,12 +6,12 @@ import tattooImg from "@/assets/tattoo-card.jpg";
 import muralImg from "@/assets/mura-card.jpg";
 import telasImg from "@/assets/telas-card.jpg";
 import digitalImg from "@/assets/digital-card.jpg";
-import alvaro2 from "@/assets/elements/alvaro2.png";
-import blobFace from "@/assets/blobs/face.png";
-import blobPaint from "@/assets/blobs/paint.png";
-import blobSpray from "@/assets/blobs/spray.png";
-import blobTattoo from "@/assets/blobs/tattoo.png";
-import blobPen from "@/assets/blobs/pen.png";
+import alvaro2 from "@/assets/elements/alvaro2.webp";
+import blobFace from "@/assets/blobs/face.webp";
+import blobPaint from "@/assets/blobs/paint.webp";
+import blobSpray from "@/assets/blobs/spray.webp";
+import blobTattoo from "@/assets/blobs/tattoo.webp";
+import blobPen from "@/assets/blobs/paint.webp";
 import { Instagram, Mail, MessageCircle, ArrowRight } from "lucide-react";
 
 const blobMap = {
@@ -45,27 +45,27 @@ const Index = () => {
   const aboutContent: Record<string, { titleSuffix: string, text: string, link: string }> = {
     tattoo: {
       titleSuffix: "na pele",
-      text: "Minha jornada na tatuagem é sobre transformar histórias e significados em arte eterna. Especializado em traços finos e composições autorais, busco sempre a harmonia entre o design e a anatomia do corpo.",
+      text: "Minha jornada na tatuagem é sobre eternizar histórias, elevador a autoestima e fazer do corpo uma tela viva. Trabalho com projetos autorais, criando composições que respeitam a anatomia e a individualidade de cada pessoa.",
       link: "/tattoo"
     },
     graffiti: {
       titleSuffix: "na rua",
-      text: "O graffiti e o muralismo me permitem ocupar o espaço urbano com cores e mensagens. Cada parede é uma tela gigante onde a escala monumental encontra a expressão artística das ruas.",
+      text: "No graffiti e muralismo tenho a oportunidade de transformar espaços, criar identidade e provocar impacto visual. Seja em ambientes urbanos ou comerciais, meu objetivo é fazer com que a arte dialogue com quem passa por ela.",
       link: "/graffiti"
     },
     telas: {
       titleSuffix: "na tela",
-      text: "Na pintura em tela, exploro texturas e camadas que a arte digital não alcança. É o meu momento de experimentação pura, onde o erro e o acerto se misturam em composições uniques.",
+      text: "A pintura é um espaço de experimentação e liberdade criativa. Entre pinceladas, texturas e o uso de diferentes materiais, exploro ideias e sentimentos que nascem da observação do cotidiano. É um processo mais íntimo, onde cada tela encontra seu próprio ritmo e tempo de maturação.",
       link: "/telas"
     },
     ilustracoes: {
       titleSuffix: "no digital",
       text: "As ilustrações digitais são onde a tecnologia encontra a criatividade sem limites. De concept arts a peças publicitárias, utilizo ferramentas modernas para dar vida a mundos imaginários.",
-      link: "/ilustracoes"
+      link: "/diversos"
     },
     all: {
       titleSuffix: "em todo lugar",
-      text: "Para mim, a arte não tem fronteiras. Seja na pele, nos muros, nas telas ou no digital, a essência é a mesma: expressar o inexpressável e colorir o mundo com novas perspectivas.",
+      text: "Para mim, a arte não tem fronteiras. Independente da superfície a essência é a mesma: transformar, gerar conexão e impactar o mundo com um novo olhar!",
       link: "/contato"
     }
   };
@@ -116,8 +116,8 @@ const Index = () => {
       <Hero />
 
       {/* Works Section - Dark Theme */}
-      <div className="container mx-auto px-6 mb-24">
-        <section className="bg-[#1a1a1a] px-4 md:px-12 py-12 md:py-20 rounded-[1.5rem] md:rounded-[3rem]">
+      <div className="w-full md:container md:mx-auto md:px-6 mb-8 md:mb-24">
+        <section className="bg-[#1a1a1a] px-6 md:px-12 py-12 md:py-20 rounded-none md:rounded-[3rem]">
           <div className="max-w-6xl mx-auto">
 
           {/* Section Header */}
@@ -127,7 +127,7 @@ const Index = () => {
               <span className="text-[hsl(var(--accent-orange))]">Trabalhos</span>
             </h2>
             <p className="text-white/40 max-w-xs text-sm leading-relaxed font-outfit md:self-center">
-              Explore as diversas áreas de atuação onde transformo ideias em experiências visuais impactantes.
+              Conheça os diferentes meios que utilizo para transformar histórias, ideias e espaços através da arte
             </p>
           </div>
 
@@ -219,7 +219,7 @@ const Index = () => {
 
             {/* Ilustrações Digitais Card - Full Image */}
             <Link
-              to="/ilustracoes"
+              to="/diversos"
               className="group relative rounded-[1.5rem] md:rounded-[2rem] transition-all duration-300 hover:-translate-y-1 shadow-[6px_6px_0_0_hsl(var(--accent-orange))] md:shadow-[8px_8px_0_0_hsl(var(--accent-orange))] hover:shadow-[4px_4px_0_0_hsl(var(--accent-orange))] min-h-[200px] md:min-h-[340px]"
             >
               <div className="absolute inset-0 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
@@ -250,8 +250,8 @@ const Index = () => {
 
       <div className="container mx-auto px-6">
         {/* Intro / Sobre Section */}
-        <section className="mb-24 pt-20">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+        <section className="mb-12 md:mb-24 pt-8 md:pt-20">
+          <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-16">
 
             {/* Text Content */}
             <div className="flex-1 max-w-2xl transition-all duration-500 relative">
@@ -266,7 +266,7 @@ const Index = () => {
                 }
               `}</style>
               <div className="relative flex items-center justify-center lg:justify-start w-full mb-8 min-h-[120px]">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 opacity-10 pointer-events-none z-0">
+                <div className="absolute top-1/2 left-1/2 lg:left-12 opacity-10 pointer-events-none z-0">
                   <img
                     key={activeArea}
                     src={blobMap[activeArea as keyof typeof blobMap]}
@@ -461,7 +461,7 @@ const Index = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
 
             {/* Left Image Side */}
-            <div className="relative w-full lg:w-1/2 flex justify-center">
+            <div className="relative w-full lg:w-1/2 flex justify-center items-center">
               {/* Floating Blobs around image */}
               <img
                 src={blobFace}
@@ -501,8 +501,8 @@ const Index = () => {
               />
 
               {/* Decorative Blob */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[450px] md:h-[450px] bg-[hsl(var(--accent-orange))] rounded-full opacity-[0.08] md:opacity-10" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] md:w-[400px] md:h-[400px] border-4 border-dashed border-black opacity-100 md:opacity-15 rounded-full animate-spin-slow" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[224px] h-[224px] md:w-[315px] md:h-[315px] bg-gradient-to-b from-orange-400 to-orange-600 rounded-full opacity-100" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] h-[290px] md:w-[400px] md:h-[400px] border border-solid border-black opacity-100 md:opacity-15 rounded-full animate-spin-slow" />
 
               <img
                 src={alvaro2}

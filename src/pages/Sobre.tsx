@@ -3,7 +3,7 @@ import PageLayout from "@/components/PageLayout";
 import { ArrowRight } from "lucide-react";
 
 // Assets
-import sobreShape from '@/assets/elements/sobre-shape-2.png';
+import sobreShape from '@/assets/elements/sobre-shape-2.webp';
 
 import star from '@/assets/elements/star.png';
 
@@ -81,7 +81,7 @@ const Sobre = () => {
                   loading="lazy"
                   className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-16 top-0 w-48 h-48 opacity-10 brightness-0 invert pointer-events-none z-0 rotate-12"
                 />
-                <p className="relative z-10 text-xl font-medium font-outfit text-black/60 mb-4 italic">Olá, eu sou o Alvaro,</p>
+                <p className="relative z-10 text-xl font-medium font-outfit text-black/60 mb-4 italic">Olá eu sou o Álvaro, um artista multidisciplinar</p>
                 <h1 className="relative z-10 text-5xl md:text-7xl font-black font-outfit leading-[0.8] text-black uppercase mb-8">
                   UM <span className="text-black lg:text-[hsl(var(--accent-orange))]">ARTIS</span>TA <br />
                   <span className="italic font-light lowercase">multidisciplinar</span> <br />
@@ -90,7 +90,7 @@ const Sobre = () => {
                   Transformando visões em expressões brutas — de murais de rua a belas artes e criações digitais.
                 </p>
                 <a
-                  href="https://wa.me/seunumero"
+                  href="https://wa.me/556493180314"
                   target="_blank"
                   className="relative z-10 inline-flex items-center justify-center gap-4 bg-[hsl(var(--accent-orange))] md:bg-black text-black md:text-white px-8 py-4 border-2 md:border-0 border-black rounded-full font-black font-outfit uppercase tracking-widest text-xs md:text-sm hover:bg-black md:hover:bg-[hsl(var(--accent-orange))] hover:text-white transition-all shadow-[4px_4px_0_0_black] md:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0_0_black] md:active:translate-y-0 group w-full md:w-auto"
                 >
@@ -100,44 +100,38 @@ const Sobre = () => {
                   </div>
                 </a>
 
-                {/* Mobile Statistics (2x2 Grid) */}
-                <div className="grid grid-cols-2 gap-x-8 gap-y-10 mt-16 w-full lg:hidden text-center">
+                {/* Mobile Statistics & Quote */}
+                <div className="flex flex-col gap-y-12 mt-16 w-full lg:hidden text-center items-center">
+                  <div className="bg-white/40 backdrop-blur-md p-6 rounded-3xl border border-black/5 shadow-sm max-w-sm text-left w-full">
+                    <span className="text-4xl font-black block mb-2 leading-none text-[hsl(var(--accent-orange))]">"</span>
+                    <p className="text-sm font-semibold leading-relaxed italic text-black/60 mb-4">
+                      Se você pudesse dizer em palavras, não haveria necessidade de pintar
+                    </p>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-black/40 text-right">
+                      — Edward Hopper
+                    </p>
+                  </div>
                   <div>
-                    <p className="text-5xl font-black font-outfit text-black leading-none">15+</p>
+                    <p className="text-6xl font-black font-outfit text-black leading-none">8+</p>
                     <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Anos de Experiência</p>
-                  </div>
-                  <div>
-                    <p className="text-5xl font-black font-outfit text-black leading-none">280+</p>
-                    <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Projetos Entregues</p>
-                  </div>
-                  <div>
-                    <p className="text-5xl font-black font-outfit text-black leading-none">*99%</p>
-                    <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Satisfação dos Clientes</p>
-                  </div>
-                  <div>
-                    <p className="text-5xl font-black font-outfit text-black leading-none">50</p>
-                    <p className="text-[10px] font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Clientes pelo mundo</p>
                   </div>
                 </div>
               </div>
  
-              {/* Right Side: Statistics (Desktop Only) */}
-              <div className="hidden lg:flex flex-col gap-12 text-right w-full lg:w-auto mt-12 lg:mt-0">
+              {/* Right Side: Quote & Statistics (Desktop Only) */}
+              <div className="hidden lg:flex flex-col gap-16 text-right w-full lg:w-auto mt-12 lg:mt-0 justify-end">
+                <div className="bg-white/40 backdrop-blur-md p-6 rounded-3xl border border-black/5 shadow-sm max-w-[260px] text-left self-end">
+                  <span className="text-4xl font-black block mb-2 leading-none text-[hsl(var(--accent-orange))]">"</span>
+                  <p className="text-sm font-semibold leading-relaxed italic text-black/60 mb-4">
+                    Se você pudesse dizer em palavras, não haveria necessidade de pintar
+                  </p>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-black/40 text-right">
+                    — Edward Hopper
+                  </p>
+                </div>
                 <div>
-                  <p className="text-6xl font-black font-outfit text-black leading-none">15+</p>
+                  <p className="text-6xl font-black font-outfit text-black leading-none">8+</p>
                   <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Anos de Experiência</p>
-                </div>
-                <div>
-                  <p className="text-6xl font-black font-outfit text-black leading-none">280+</p>
-                  <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Projetos Entregues</p>
-                </div>
-                <div>
-                  <p className="text-6xl font-black font-outfit text-black leading-none">*99%</p>
-                  <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Satisfação dos Clientes</p>
-                </div>
-                <div>
-                  <p className="text-6xl font-black font-outfit text-black leading-none">50</p>
-                  <p className="text-xs font-bold font-outfit text-black/30 mt-2 uppercase tracking-[0.2em]">Clientes pelo mundo</p>
                 </div>
               </div>
             </div>
@@ -157,8 +151,8 @@ const Sobre = () => {
               />
               <div className="flex items-center justify-between gap-4 w-full md:block">
                 <h2 className="relative z-10 text-3xl md:text-5xl font-black font-outfit uppercase leading-tight flex-1 text-center md:text-left">
-                  O Início <br />
-                  <span className="text-[hsl(var(--accent-orange))]">de Tudo</span>
+                  Sobre <br />
+                  <span className="text-[hsl(var(--accent-orange))]">mim</span>
                 </h2>
                 
                 {/* Mobile Photo (beside title) */}
@@ -173,7 +167,10 @@ const Sobre = () => {
                 </div>
               </div>
               <p className="relative z-10 text-lg text-black/70 font-outfit leading-relaxed text-center md:text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                A arte sempre esteve presente na minha vida e foi logo na infância que percebi uma facilidade natural para atividades manuais, especialmente o desenho e a música.
+                Eu fui uma criança curiosa e criativa, que passava horas criando histórias, construindo universos imaginários e observando as criaturas que surgiam nos desenhos naturais das paredes de madeira da casa onde morei.
+                O tempo passou, o menino cresceu e junto com ele também cresceu a vontade de viver da arte. Aos 19 anos encontrei a oportunidade de transformar essa paixão em profissão. O que começou como um sonho se tornou um caminho de aprendizado e constante evolução.
+                Hoje, após mais de oito anos de trajetória, continuo movido pela mesma curiosidade que me acompanhava na infância. A diferença é que agora encontrei novas formas de explorar, criar e compartilhar minha visão de mundo.
               </p>
             </div>
             <div className="flex-1 w-full min-h-[300px] hidden md:block">
@@ -218,7 +215,9 @@ const Sobre = () => {
                 </h2>
               </div>
               <p className="relative z-10 text-lg text-black/70 font-outfit leading-relaxed text-center md:text-right">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                A arte me ensina a olhar com mais atenção. Para as pessoas, para os espaços, para a natureza e para os pequenos detalhes que muitas vezes passam despercebidos. É desse exercício de observação que nasce grande parte do meu trabalho.
+                Acredito no valor do tempo e dos processos. Algumas ideias levam dias para amadurecer, outras levam meses. Por isso, procuro criar sem pressa, respeitando o caminho que cada projeto precisa percorrer até encontrar sua forma final.
+                No fim, a arte é a forma que encontrei de deixar algo de mim no mundo. E existe um certo conforto em saber que, enquanto uma dessas criações continuar existindo, uma parte da minha história seguirá viva junto com ela.
               </p>
             </div>
             <div className="flex-1 w-full min-h-[300px] hidden md:block">

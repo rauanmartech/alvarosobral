@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { Instagram, MessageCircle, ArrowRight } from "lucide-react";
 
 // Assets
-import tattooShape from '@/assets/elements/tattoo-shape.png';
-import blobFace from '@/assets/blobs/face.png';
-import blobPaint from '@/assets/blobs/paint.png';
-import blobTattoo from '@/assets/blobs/tattoo.png';
+import tattooShape from '@/assets/elements/tattoo-shape.webp';
+import blobFace from '@/assets/blobs/face.webp';
+import blobPaint from '@/assets/blobs/paint.webp';
+import blobTattoo from '@/assets/blobs/tattoo.webp';
 import star from '@/assets/elements/star.png';
 
 import { supabase } from "@/utils/supabase";
@@ -85,7 +85,7 @@ const Tattoo = () => {
             
             {/* Left Side: Content */}
             <div className="flex-1 z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="inline-flex items-center gap-3 px-6 py-2 bg-white border-2 border-black rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm mb-8 shadow-[4px_4px_0_0_black] -rotate-2">
+              <div className="inline-flex items-center gap-3 px-6 py-2 bg-white border-2 border-black rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm mb-8 shadow-[4px_4px_0_0_black]">
                 <div className="w-2 h-2 bg-[hsl(var(--accent-orange))] rounded-full" />
                 <span className="text-black text-[10px] font-black uppercase tracking-[0.2em] font-alpha">Portfólio de Tatuagem</span>
               </div>
@@ -95,7 +95,7 @@ const Tattoo = () => {
                   src={star} 
                   alt="" 
                   loading="lazy"
-                  className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-20 top-1/2 -translate-y-1/2 w-56 h-56 opacity-20 brightness-0 invert pointer-events-none z-0 rotate-12"
+                  className="absolute left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 lg:-left-20 top-1/2 -translate-y-1/2 w-56 h-56 opacity-20 brightness-0 invert pointer-events-none z-0"
                 />
                 <h1 className="relative z-10 text-6xl md:text-8xl font-black font-outfit mb-6 leading-[0.9] text-white uppercase">
                   ARTE <br />
@@ -104,7 +104,7 @@ const Tattoo = () => {
               </div>
 
               <p className="text-lg md:text-xl text-white/50 font-outfit mb-10 max-w-xl leading-relaxed">
-                Minha jornada na tatuagem é sobre transformar histórias e significados em arte eterna. Especializado em traços finos e composições autorais, busco sempre a harmonia entre o design e a anatomia do corpo.
+                Especializado em Neo Tradicional, desenvolvo projetos autorais explorando o contraste entre traços grossos e finos para criar composições marcantes. Também realizo coberturas, reformas e fechamentos, planejando composições que valorizam o corpo e garantem uma leitura harmoniosa ao longo do tempo.
               </p>
 
               {/* Info Bar - UX Improved (Differentiating Info vs Action) */}
@@ -113,14 +113,14 @@ const Tattoo = () => {
                 <div className="bg-white/5 border-2 border-dashed border-white/20 px-6 h-20 rounded-2xl flex flex-col justify-center min-w-[180px] w-full md:w-auto relative group overflow-hidden">
                   <div className="absolute top-0 left-0 w-1 h-full bg-[hsl(var(--accent-orange))] opacity-50" />
                   <p className="text-white/30 text-[10px] font-black uppercase tracking-widest mb-1">Especialidade</p>
-                  <p className="text-white font-bold font-outfit">Fine Line & Autoral</p>
+                  <p className="text-white font-bold font-outfit">Neotradicional & Blackwork</p>
                 </div>
                 
                 {/* Info Card 2 */}
                 <div className="bg-white/5 border-2 border-dashed border-white/20 px-6 h-20 rounded-2xl flex flex-col justify-center min-w-[180px] w-full md:w-auto relative group overflow-hidden">
                   <div className="absolute top-0 left-0 w-1 h-full bg-[hsl(var(--accent-orange))] opacity-50" />
                   <p className="text-white/30 text-[10px] font-black uppercase tracking-widest mb-1">Localização</p>
-                  <p className="text-white font-bold font-outfit">Studio Privado</p>
+                  <p className="text-white font-bold font-outfit">Estúdio Privado</p>
                 </div>
 
                 {/* Primary Action Button - Stays Pop Art */}
@@ -141,8 +141,9 @@ const Tattoo = () => {
             <div className="relative w-full lg:absolute lg:top-0 lg:right-0 lg:h-full lg:w-1/2 flex justify-center items-center min-h-[350px] lg:min-h-0 z-0">
               {/* Geometric Background Shapes (Behind Image) */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[500px] md:h-[500px] bg-[hsl(var(--accent-orange))] rounded-full opacity-10 z-0" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[196px] h-[196px] md:w-[350px] md:h-[350px] bg-gradient-to-b from-orange-400 to-orange-600 rounded-full opacity-100 z-0" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[550px] md:h-[550px] border border-white/5 rounded-full z-0" />
-              <div className="absolute top-[48%] left-[52%] -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] md:w-[480px] md:h-[480px] border-2 border-dashed border-[hsl(var(--accent-orange))]/20 rounded-full z-0" />
+
 
               {/* Main Shape Image */}
               <img 
@@ -154,28 +155,7 @@ const Tattoo = () => {
                 style={{ maxHeight: '100%' }}
               />
 
-              {/* Floating Blobs */}
-              <img
-                src={blobFace}
-                alt=""
-                loading="lazy"
-                className="absolute z-30 pointer-events-none select-none w-[50px] md:w-[80px] top-[10%] left-[8%] lg:left-auto lg:right-[80%]"
-                style={{ animation: 'floatA 5s ease-in-out infinite' }}
-              />
-              <img
-                src={blobTattoo}
-                alt=""
-                loading="lazy"
-                className="absolute z-30 pointer-events-none select-none w-[45px] md:w-[70px] bottom-[15%] left-[12%] lg:left-auto lg:right-[70%]"
-                style={{ animation: 'floatB 6s ease-in-out infinite' }}
-              />
-              <img
-                src={blobPaint}
-                alt=""
-                loading="lazy"
-                className="absolute z-30 pointer-events-none select-none w-[40px] md:w-[60px] top-[20%] right-[10%]"
-                style={{ animation: 'floatC 7s ease-in-out infinite' }}
-              />
+
             </div>
           </div>
         </div>
@@ -190,7 +170,7 @@ const Tattoo = () => {
               Trabalhos <br />
               <span className="text-[hsl(var(--accent-orange))]">Recentes</span>
             </h2>
-            <p className="text-black/40 font-outfit mt-4 max-w-sm">Uma seleção exclusiva de artes criadas no studio, do traço à eternidade.</p>
+            <p className="text-black/40 font-outfit mt-4 max-w-sm">Confira aqui uma seleção de tatuagens feitas por mim.</p>
           </div>
           <div className="flex gap-4 w-full md:w-auto justify-center">
             <a href="https://instagram.com" target="_blank" className="flex items-center justify-center w-full md:w-auto gap-3 bg-black text-white px-6 py-3 rounded-2xl font-black shadow-[4px_4px_0_0_hsl(var(--accent-orange))] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all font-outfit uppercase text-sm">
@@ -215,7 +195,7 @@ const Tattoo = () => {
                   </div>
                 </div>
               )}
-              <div className="relative z-10 bg-zinc-900 border-2 border-black p-1.5 md:p-3.5 rounded-lg md:rounded-xl shadow-[2px_2px_0_0_black] md:shadow-[3px_3px_0_0_black] w-full md:max-w-xs mt-auto flex items-center gap-1 md:gap-2 -rotate-1">
+              <div className="relative z-10 bg-zinc-900 border-2 border-black p-1.5 md:p-3.5 rounded-lg md:rounded-xl shadow-[2px_2px_0_0_black] md:shadow-[3px_3px_0_0_black] w-full md:max-w-xs mt-auto flex items-center gap-1 md:gap-2">
                 <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0 animate-pulse" />
                 <p className="text-white font-black text-[8px] md:text-sm uppercase font-outfit tracking-wider leading-tight truncate">{starredItem.title}</p>
               </div>
@@ -243,7 +223,7 @@ const Tattoo = () => {
                     <div className="w-8 h-8 md:w-12 md:h-12 bg-white/5 rounded-lg md:rounded-2xl" />
                   </div>
                 )}
-                <div className="relative z-10 bg-zinc-900 border-2 border-black p-1 md:p-2.5 rounded md:rounded-lg shadow-[1.5px_1.5px_0_0_black] md:shadow-[2.5px_2.5px_0_0_black] w-full mt-auto flex items-center gap-1 md:gap-1.5 rotate-1">
+                <div className="relative z-10 bg-zinc-900 border-2 border-black p-1 md:p-2.5 rounded md:rounded-lg shadow-[1.5px_1.5px_0_0_black] md:shadow-[2.5px_2.5px_0_0_black] w-full mt-auto flex items-center gap-1 md:gap-1.5">
                   <div className="w-1 h-1 bg-[hsl(var(--accent-orange))] rounded-full shrink-0" />
                   <p className="text-white font-black uppercase font-outfit tracking-wider text-[7px] md:text-[10px] truncate">{item.title}</p>
                 </div>

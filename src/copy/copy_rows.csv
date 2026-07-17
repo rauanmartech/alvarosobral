@@ -1,0 +1,112 @@
+id,section,element_key,label,value,updated_at
+contato_address_city,contato,address_city,"Cidade, Estado e CEP","Catalão, GO — 75701-220",2026-05-20 12:26:35.080358+00
+contato_address_label,contato,address_label,Rótulo do Endereço,Localização,2026-05-20 12:26:35.080358+00
+contato_address_street,contato,address_street,Rua e Número,"Rua Dr. Wiliam Faiad, 171",2026-05-20 12:26:35.080358+00
+contato_badge,contato,badge,Selo do Contato,Iniciar Projeto,2026-05-20 12:26:35.080358+00
+contato_desc,contato,desc,Descrição Principal,Vamos tirar sua ideia do papel e criar algo único juntos.,2026-06-25 19:47:06.077001+00
+contato_email_label,contato,email_label,Rótulo do E-mail,E-mail,2026-05-20 12:26:35.080358+00
+contato_email_val,contato,email_val,Endereço de E-mail,hello@digitalagency.com,2026-05-20 12:26:35.080358+00
+contato_instagram_label,contato,instagram_label,Rótulo do Instagram,Instagram,2026-05-20 12:26:35.080358+00
+contato_instagram_val,contato,instagram_val,Perfil do Instagram,@alvaro.ttt,2026-05-20 12:26:35.080358+00
+contato_studio_label,contato,studio_label,Rótulo do Estúdio,Estúdio,2026-05-20 12:26:35.080358+00
+contato_studio_val,contato,studio_val,Perfil do Estúdio,@juramento.ttt,2026-05-20 12:26:35.080358+00
+contato_title,contato,title,Título Principal,Transforme visão em arte,2026-05-20 12:26:35.080358+00
+contato_typing_badge,contato,typing_badge,Selo da Frase Rotativa,Arte que inspira,2026-05-20 12:26:35.080358+00
+contato_typing_phrases,contato,typing_phrases,Frases Rotativas,"na pele, na rua, na tela, arte onde você quiser ",2026-06-25 19:47:56.149439+00
+contato_whatsapp_label,contato,whatsapp_label,Rótulo do WhatsApp,WhatsApp,2026-05-20 12:26:35.080358+00
+contato_whatsapp_val,contato,whatsapp_val,Telefone do WhatsApp,+55 (64) 9318-0314,2026-05-20 12:26:35.080358+00
+faq_badge,faq,badge,Selo do FAQ,Ainda está com dúvidas?,2026-05-20 12:26:35.080358+00
+faq_cta_btn,faq,cta_btn,Botão de Ação do FAQ,Falar com Álvaro,2026-06-25 19:46:00.174444+00
+faq_cta_title,faq,cta_title,Título da Chamada Final,Ainda tem dúvidas?,2026-05-20 12:26:35.080358+00
+faq_desc,faq,desc,Descrição Auxiliar,"Tudo o que você precisa saber sobre o meu processo criativo, agendamentos e projetos autorais.",2026-05-20 12:26:35.080358+00
+faq_title,faq,title,Título Principal,Dúvidas Frequentes.,2026-05-20 12:26:35.080358+00
+global_footer_admin_link,global,footer_admin_link,Texto do Link do Admin,Área do Administrador,2026-05-20 12:26:35.080358+00
+global_footer_email,global,footer_email,E-mail de Contato,hello@digitalagency.com,2026-05-20 12:26:35.080358+00
+global_footer_slogan,global,footer_slogan,Slogan do Rodapé,Arte onde você quiser,2026-06-25 19:01:58.768012+00
+global_header_menu,global,header_menu,Menu de Navegação,"Início, Tattoo, Graffiti, Telas, Ilustrações, Sobre, FAQ, Contato",2026-05-20 12:26:35.080358+00
+graffiti_badge,graffiti,badge,Selo da Página,Portfólio de Graffiti,2026-05-20 12:26:35.080358+00
+graffiti_btn_action,graffiti,btn_action,Botão de Ação,Orçar,2026-05-20 12:26:35.080358+00
+graffiti_btn_insta,graffiti,btn_insta,Botão Instagram,Ver no Insta,2026-05-20 12:26:35.080358+00
+graffiti_desc,graffiti,desc,Descrição Principal,"Trabalho com diferentes estilos visuais, adaptando cada projeto à identidade e ao perfil do cliente. Meu objetivo é criar ambientes e fachadas com mais personalidade e significado, valorizando o espaço e despertando novas percepções sobre ele.",2026-06-25 19:11:50.19172+00
+graffiti_gallery_desc,graffiti,gallery_desc,Descrição da Galeria,Confira aqui algumas transformações que já fiz,2026-06-25 19:12:59.162666+00
+graffiti_gallery_title,graffiti,gallery_title,Título da Galeria,Murais Recentes,2026-05-20 12:26:35.080358+00
+graffiti_info_label1,graffiti,info_label1,Info Rápida 1,"Spray & Pincel ",2026-06-25 19:13:31.809857+00
+graffiti_info_label2,graffiti,info_label2,Info Rápida 2,Projetos Nacionais,2026-05-20 12:26:35.080358+00
+graffiti_title,graffiti,title,Título Principal,ARTE NA RUA,2026-06-25 19:21:23.358589+00
+home_area_digital_desc,home,area_digital_desc,Descrição de Digital (no digital),"As ilustrações digitais são onde a tecnologia encontra a criatividade sem limites. De concept arts a peças publicitárias, utilizo ferramentas modernas para dar vida a mundos imaginários.",2026-05-20 12:26:35.080358+00
+home_area_general_desc,home,area_general_desc,Descrição Geral (em todo lugar),"Para mim, a arte não tem fronteiras. Independente da superfície a essência é a mesma: transformar, gerar conexão e impactar o mundo com um novo olhar!",2026-06-25 19:03:02.497305+00
+home_area_graffiti_desc,home,area_graffiti_desc,Descrição de Graffiti (na rua),"No graffiti e muralismo tenho a oportunidade de transformar espaços, criar identidade e provocar impacto visual. Seja em ambientes urbanos ou comerciais, meu objetivo é fazer com que a arte dialogue com quem passa por ela.",2026-06-25 19:03:51.447252+00
+home_area_tattoo_desc,home,area_tattoo_desc,Descrição de Tattoo (na pele),"Minha jornada na tatuagem é sobre eternizar histórias, elevador a autoestima e fazer do corpo uma tela viva. Trabalho com projetos autorais, criando composições que respeitam a anatomia e a individualidade de cada pessoa.",2026-06-25 19:05:02.244078+00
+home_area_telas_desc,home,area_telas_desc,Descrição de Telas (na tela),"A pintura é um espaço de experimentação e liberdade criativa. Entre pinceladas, texturas e o uso de diferentes materiais, exploro ideias e sentimentos que nascem da observação do cotidiano. É um processo mais íntimo, onde cada tela encontra seu próprio ritmo e tempo de maturação.",2026-06-25 19:05:46.70319+00
+home_areas_hint,home,areas_hint,Dica de Clique,clique para mudar,2026-05-20 12:26:35.080358+00
+home_areas_prefix,home,areas_prefix,Prefixo do Título de Áreas,Arte,2026-05-20 12:26:35.080358+00
+home_hero_btn1,home,hero_btn1,Botão de Portfólio,"Portfólio ",2026-06-25 18:58:55.800572+00
+home_hero_btn2,home,hero_btn2,Botão de Contratação,Contratar,2026-06-25 19:06:31.427711+00
+home_hero_quote,home,hero_quote,Frase de Citação,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.",2026-05-20 12:26:35.080358+00
+home_hero_stat1,home,hero_stat1,Estatística 1,450+ Client Served,2026-05-20 12:26:35.080358+00
+home_hero_stat2,home,hero_stat2,Estatística 2,"+ 8 anos de experiência ",2026-06-25 19:07:01.253804+00
+home_hero_tags,home,hero_tags,Cápsulas de Física,"REFLEXÃO, PROCESSO, CONCEITO, AUTORAL, IDENTIDADE, PROJETOS",2026-05-20 12:26:35.080358+00
+home_hero_title,home,hero_title,Título do Hero,"Eu sou Álvaro, seu multiartista",2026-06-25 18:59:39.553384+00
+home_works_categories,home,works_categories,Categorias de Trabalhos,"Tattoo, Graffiti, Telas",2026-06-25 18:59:55.13846+00
+home_works_desc,home,works_desc,Descrição de Trabalhos,"Conheça os diferentes meios que utilizo para transformar histórias, ideias e espaços através da arte",2026-06-25 19:00:16.515479+00
+home_works_title,home,works_title,Título de Trabalhos,Meus Trabalhos,2026-05-20 12:26:35.080358+00
+ilustracoes_badge,ilustracoes,badge,Selo da Página,Ilustração Digital,2026-05-20 12:26:35.080358+00
+ilustracoes_btn_action,ilustracoes,btn_action,Botão de Ação,Contratar,2026-05-20 12:26:35.080358+00
+ilustracoes_btn_insta,ilustracoes,btn_insta,Botão Instagram,Ver no Insta,2026-05-20 12:26:35.080358+00
+ilustracoes_desc,ilustracoes,desc,Descrição Principal,"Colagens, objetos decorativos, ilustrações e prints são algumas das mídias que utilizo para expandir minha produção artística. Cada suporte oferece novas possibilidades de experimentação, narrativa e expressão.",2026-06-25 19:26:37.391509+00
+ilustracoes_gallery_desc,ilustracoes,gallery_desc,Descrição da Galeria,"Confira aqui alguns trabalhos feitos em diferentes técnicas ",2026-06-25 19:28:45.373096+00
+ilustracoes_gallery_title,ilustracoes,gallery_title,Título da Galeria,"Outros ",2026-06-25 19:29:31.151268+00
+ilustracoes_info_label1,ilustracoes,info_label1,Info Rápida 1,Diversas,2026-06-25 19:29:55.664521+00
+ilustracoes_info_label2,ilustracoes,info_label2,Info Rápida 2,Character Design,2026-05-20 12:26:35.080358+00
+ilustracoes_title,ilustracoes,title,Título Principal,ARTE ONDE VOCÊ QUISER,2026-06-25 19:30:14.034661+00
+sobre_btn_action,sobre,btn_action,Botão de Contato,Entre em Contato,2026-05-20 12:26:35.080358+00
+sobre_desc,sobre,desc,Descrição Principal,"Olá eu sou o Álvaro, um artista multidisciplinar",2026-06-25 19:30:51.39982+00
+sobre_prefix,sobre,prefix,Apresentação Inicial,"Olá eu sou o Álvaro, um artista multidisciplinar",2026-06-25 19:41:15.979876+00
+sobre_sec1_desc,sobre,sec1_desc,Descrição do Histórico 1,"A arte sempre esteve presente na minha vida e foi logo na infância que percebi uma facilidade natural para atividades manuais, especialmente o desenho e a música.
+Eu fui uma criança curiosa e criativa, que passava horas criando histórias, construindo universos imaginários e observando as criaturas que surgiam nos desenhos naturais das paredes de madeira da casa onde morei.
+O tempo passou, o menino cresceu e junto com ele também cresceu a vontade de viver da arte. Aos 19 anos encontrei a oportunidade de transformar essa paixão em profissão. O que começou como um sonho se tornou um caminho de aprendizado e constante evolução. 
+
+Hoje, após mais de oito anos de trajetória, continuo movido pela mesma curiosidade que me acompanhava na infância. A diferença é que agora encontrei novas formas de explorar, criar e compartilhar minha visão de mundo.",2026-06-25 19:40:54.904099+00
+sobre_sec1_title,sobre,sec1_title,Título do Histórico 1,Sobre mim,2026-06-25 19:41:54.464769+00
+sobre_sec2_desc,sobre,sec2_desc,Descrição do Histórico 2,"A arte me ensina a olhar com mais atenção. Para as pessoas, para os espaços, para a natureza e para os pequenos detalhes que muitas vezes passam despercebidos. É desse exercício de observação que nasce grande parte do meu trabalho.
+
+Acredito no valor do tempo e dos processos. Algumas ideias levam dias para amadurecer, outras levam meses. Por isso, procuro criar sem pressa, respeitando o caminho que cada projeto precisa percorrer até encontrar sua forma final. 
+
+No fim, a arte é a forma que encontrei de deixar algo de mim no mundo. E existe um certo conforto em saber que, enquanto uma dessas criações continuar existindo, uma parte da minha história seguirá viva junto com ela. ",2026-06-25 19:43:32.672935+00
+sobre_sec2_title,sobre,sec2_title,Título do Histórico 2,Minha Filosofia,2026-05-20 12:26:35.080358+00
+sobre_stat_1,sobre,stat_1,Estatística 1,"+ 8 anos de experiência ",2026-06-25 19:43:56.635919+00
+sobre_stat_2,sobre,stat_2,Estatística 2,280+ Projetos Entregues,2026-05-20 12:26:35.080358+00
+sobre_stat_3,sobre,stat_3,Estatística 3,*99% Satisfação dos Clientes,2026-05-20 12:26:35.080358+00
+sobre_stat_4,sobre,stat_4,Estatística 4,50 Clientes pelo mundo,2026-05-20 12:26:35.080358+00
+sobre_title,sobre,title,Título Principal,UM ARTISTA multidisciplinar,2026-05-20 12:26:35.080358+00
+sobre_word_cloud,sobre,word_cloud,Nuvem de Palavras,"Versátilidade, Arte, Tattoo, Graffiti, Tinta, Criatividade, Expressão, Muralismo, Originalidade, Cores, Autoral",2026-06-25 19:45:42.721584+00
+tattoo_badge,tattoo,badge,Selo da Página,Portfólio de Tatuagem,2026-05-20 12:26:35.080358+00
+tattoo_btn_action,tattoo,btn_action,Botão de Ação,Agendar,2026-05-20 12:26:35.080358+00
+tattoo_btn_insta,tattoo,btn_insta,Botão Instagram,Ver no Insta,2026-05-20 12:26:35.080358+00
+tattoo_desc,tattoo,desc,Descrição Principal,"Especializado em Neo Tradicional, desenvolvo projetos autorais explorando o contraste entre traços grossos e finos para criar composições marcantes. Também realizo coberturas, reformas e fechamentos, planejando composições que valorizam o corpo e garantem uma leitura harmoniosa ao longo do tempo.",2026-06-25 19:18:57.315261+00
+tattoo_gallery_desc,tattoo,gallery_desc,Descrição da Galeria,Confira aqui uma seleção de tatuagens feitas por mim,2026-06-25 19:10:08.644745+00
+tattoo_gallery_title,tattoo,gallery_title,Título da Galeria,Trabalhos Recentes,2026-05-20 12:26:35.080358+00
+tattoo_info_label1,tattoo,info_label1,Info Rápida 1,Neotradicional & Blackwork,2026-06-24 23:55:12.411739+00
+tattoo_info_label2,tattoo,info_label2,Info Rápida 2,Estúdio Privado,2026-06-24 23:55:26.149522+00
+tattoo_title,tattoo,title,Título Principal,ARTE NA PELE,2026-06-25 19:21:05.604685+00
+telas_badge,telas,badge,Selo da Página,Portfólio de Telas,2026-05-20 12:26:35.080358+00
+telas_btn_action,telas,btn_action,Botão de Ação,Adquirir,2026-05-20 12:26:35.080358+00
+telas_btn_insta,telas,btn_insta,Botão Instagram,Ver no Insta,2026-05-20 12:26:35.080358+00
+telas_desc,telas,desc,Descrição Principal,"Minha produção tem caráter figurativo e encontra na natureza sua principal fonte de inspiração. A relação entre o ser humano, o cosmos e a espiritualidade aparece com frequência, criando obras que convidam à contemplação.",2026-06-25 19:15:21.929566+00
+telas_gallery_desc,telas,gallery_desc,Descrição da Galeria,Confira aqui algumas pinturas do meu acervo,2026-06-25 19:22:15.807092+00
+telas_gallery_title,telas,gallery_title,Título da Galeria,Obras Disponíveis,2026-05-20 12:26:35.080358+00
+telas_info_label1,telas,info_label1,Info Rápida 1,"Acrílica, Óleo, Pastel & Spray",2026-06-25 19:17:24.167105+00
+telas_info_label2,telas,info_label2,Info Rápida 2,Expressivo & Autoral,2026-05-20 12:26:35.080358+00
+telas_title,telas,title,Título Principal,ARTE NA TELA,2026-06-25 19:21:54.368073+00
+waiting_badge,lista-espera,badge,Selo da Página,Lista de Espera,2026-05-20 12:26:35.080358+00
+waiting_btn_submit,lista-espera,btn_submit,Botão Enviar,Enviar Inscrição,2026-05-20 12:26:35.080358+00
+waiting_desc,lista-espera,desc,Descrição Auxiliar,Quer que eu tatue na sua cidade? Preencha os dados abaixo e registre seu interesse.,2026-06-25 20:02:55.669688+00
+waiting_field_age,lista-espera,field_age,Campo Idade,Idade,2026-05-20 12:26:35.080358+00
+waiting_field_city,lista-espera,field_city,Campo Cidade,Cidade onde mora,2026-05-20 12:26:35.080358+00
+waiting_field_email,lista-espera,field_email,Campo E-mail,E-mail,2026-05-20 12:26:35.080358+00
+waiting_field_instagram,lista-espera,field_instagram,Campo Instagram,Instagram,2026-05-20 12:26:35.080358+00
+waiting_field_name,lista-espera,field_name,Campo Nome,Nome Completo,2026-05-20 12:26:35.080358+00
+waiting_field_orcamento,lista-espera,field_orcamento,Campo Orçamento,Deseja fazer o orçamento do seu projeto?,2026-05-20 12:26:35.080358+00
+waiting_field_tatuou,lista-espera,field_tatuou,Campo Já Tatuou,Já se tatuou comigo?,2026-05-20 12:26:35.080358+00
+waiting_field_whatsapp,lista-espera,field_whatsapp,Campo WhatsApp,Telefone com WhatsApp,2026-05-20 12:26:35.080358+00
+waiting_title,lista-espera,title,Título Principal,Lista de Espera,2026-05-20 12:26:35.080358+00
