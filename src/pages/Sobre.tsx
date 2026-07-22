@@ -63,7 +63,6 @@ const Sobre = () => {
               src={sobreShape}
               alt="Sobre Shape"
               loading="eager"
-              fetchPriority="high"
               className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full object-contain object-top z-10 scale-[0.86] origin-top"
             />
 
@@ -83,7 +82,7 @@ const Sobre = () => {
                 />
                 <p className="relative z-10 text-xl font-medium font-outfit text-black/60 mb-4 italic">Olá eu sou o Álvaro, um artista multidisciplinar</p>
                 <h1 className="relative z-10 text-5xl md:text-7xl font-black font-outfit leading-[0.8] text-black uppercase mb-8">
-                  UM <span className="text-black lg:text-[hsl(var(--accent-orange))]">ARTIS</span>TA <br />
+                  UM ARTISTA <br />
                   <span className="italic font-light lowercase">multidisciplinar</span> <br />
                 </h1>
                 <p className="relative z-10 text-lg md:text-xl text-black/50 font-outfit mb-12 max-w-lg leading-relaxed">

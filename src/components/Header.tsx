@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/blobs/Álvaro Logo e Slogan.webp";
+import logo from "@/assets/blobs/Álvaro Logo.webp";
 
 const navLinks = [
   { to: "/", label: "Início" },

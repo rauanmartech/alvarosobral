@@ -6,10 +6,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Star } from "lucide-react";
-import star from '@/assets/elements/star.png';
-import faqPng from '@/assets/elements/faq.png';
-
 import { supabase } from "@/utils/supabase";
 
 interface FAQItem {
@@ -45,8 +41,7 @@ const FAQ = () => {
 
   return (
     <PageLayout>
-      <div className="bg-[#fafafa] -mt-32 pt-32 min-h-screen pb-32 overflow-hidden">
-
+      <div className="bg-[#fafafa] -mt-32 pt-32 min-h-screen pb-32 overflow-hidden relative">
         {/* Pop-Art Header Background Shape */}
         <div className="absolute top-0 left-0 w-full h-[500px] pointer-events-none z-0 hidden md:block">
           <svg
@@ -63,75 +58,66 @@ const FAQ = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#fafafa]" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 pt-20">
+        <div className="container mx-auto px-6 relative z-10 pt-20 lg:pt-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 max-w-7xl mx-auto">
+            
+            {/* Left Column: Heading and CTA */}
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-col items-start text-left">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-3 px-6 py-2 bg-white border-2 border-black rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm mb-8 shadow-[4px_4px_0_0_black] -rotate-2">
+                  <div className="w-2 h-2 bg-[hsl(var(--accent-orange))] rounded-full" />
+                  <span className="text-black text-[10px] font-black uppercase tracking-[0.2em] font-alpha">Suas dúvidas, respondidas</span>
+                </div>
+                
+                <h1 className="text-5xl md:text-7xl font-black font-alpha uppercase leading-[0.9] text-black tracking-tighter mb-6">
+                  Perguntas <br className="hidden lg:block"/>
+                  <span className="text-[hsl(var(--accent-orange))]">Frequentes</span>
+                </h1>
 
-          {/* Header Content */}
-          <div className="text-center mb-20 relative">
-            <img
-              src={star}
-              alt=""
-              className="absolute left-1/2 -top-16 -translate-x-1/2 w-40 h-40 opacity-20 brightness-0 invert pointer-events-none z-0 rotate-12"
-            />
-            <div className="inline-flex items-center gap-3 px-6 py-2 bg-white border-2 border-black rounded-tr-2xl rounded-bl-2xl rounded-tl-sm rounded-br-sm mb-8 shadow-[4px_4px_0_0_black] -rotate-2">
-              <div className="w-2 h-2 bg-[hsl(var(--accent-orange))] rounded-full" />
-              <span className="text-black text-[10px] font-black uppercase tracking-[0.2em] font-alpha">Ainda está com dúvidas?</span>
-            </div>
-            <div className="mb-12 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
-              <div className="relative hidden md:block">
-                <h1 className="sr-only">FAQ - Perguntas Frequentes</h1>
-                <img
-                  src={faqPng}
-                  alt="FAQ"
-                  className="h-44 md:h-[260px] lg:h-[320px] w-auto object-contain relative z-10"
-                />
+                <p className="text-lg md:text-xl text-black/60 font-outfit max-w-md leading-relaxed">
+                  Tudo o que você precisa saber sobre o meu processo criativo, agendamentos e projetos autorais.
+                </p>
               </div>
 
-              <div className="flex flex-col gap-2 md:gap-0 items-center md:items-start justify-center text-center md:text-left md:pt-4">
-                <span className="text-5xl md:text-7xl lg:text-9xl font-black font-alpha uppercase leading-[0.8] text-black tracking-tighter">
-                  Dúvidas
-                </span>
-                <span className="text-5xl md:text-7xl lg:text-9xl font-black font-alpha uppercase leading-[0.8] text-[hsl(var(--accent-orange))] tracking-tighter">
-                  Frequentes<span className="hidden md:inline">.</span>
-                </span>
-              </div>
-            </div>
-            <p className="text-lg text-black/40 font-outfit max-w-xl mx-auto">
-              Tudo o que você precisa saber sobre o meu processo criativo, agendamentos e projetos autorais.
-            </p>
-          </div>
-
-          {/* Accordion List */}
-          <div className="max-w-3xl mx-auto space-y-6">
-            <Accordion type="single" collapsible className="space-y-6 border-none">
-              {faqs.map((faq, i) => (
-                <AccordionItem
-                  key={i}
-                  value={`item-${i}`}
-                  className="bg-white border-2 border-black rounded-[2rem] shadow-[6px_6px_0_0_black] px-4 md:px-8 overflow-hidden data-[state=open]:shadow-none data-[state=open]:translate-x-[2px] data-[state=open]:translate-y-[2px] transition-all"
+              {/* Still Have Questions Box */}
+              <div className="bg-white border-2 border-black rounded-[2rem] p-8 md:p-10 shadow-[8px_8px_0_0_black] mt-4 lg:mt-8 max-w-md">
+                <h3 className="text-3xl font-black font-alpha uppercase mb-4 text-black">Ainda tem dúvidas?</h3>
+                <p className="text-black/60 font-outfit mb-10 text-lg leading-relaxed">
+                  Entendemos que cada projeto tem necessidades únicas. Se você quer esclarecer algo sobre orçamentos, disponibilidade ou apresentar sua ideia, estamos aqui para ajudar.
+                </p>
+                <a
+                  href="https://wa.me/556493180314"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-full gap-4 bg-[hsl(var(--accent-orange))] text-black border-2 border-black px-8 py-5 rounded-full font-black font-alpha uppercase tracking-widest text-sm hover:-translate-y-1 hover:shadow-[4px_4px_0_0_black] transition-all"
                 >
-                  <AccordionTrigger className="hover:no-underline py-6 text-left font-outfit font-black text-lg md:text-xl uppercase group">
-                    <span className="group-data-[state=open]:text-[hsl(var(--accent-orange))] transition-colors">{faq.q}</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="pb-8 text-black/60 font-outfit text-lg leading-relaxed border-t border-black/5 pt-4">
-                    {faq.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
+                  Falar com Álvaro
+                </a>
+              </div>
+            </div>
 
-          {/* Footer CTA */}
-          <div className="mt-24 text-center">
-            <p className="text-black/30 font-black uppercase tracking-widest text-sm mb-6">Ainda tem dúvidas?</p>
-            <a
-              href="https://wa.me/556493180314"
-              target="_blank"
-              className="inline-flex items-center justify-center w-full md:w-auto gap-4 bg-black text-white px-10 py-5 rounded-full font-black font-alpha uppercase tracking-widest text-sm hover:bg-[hsl(var(--accent-orange))] transition-all shadow-[8px_8px_0_0_black]"
-            >
-              Falar com Álvaro
-            </a>
-          </div>
+            {/* Right Column: Accordion */}
+            <div className="flex flex-col pt-4 lg:pt-0">
+              <Accordion type="single" collapsible className="space-y-5 border-none">
+                {faqs.map((faq, i) => (
+                  <AccordionItem
+                    key={i}
+                    value={`item-${i}`}
+                    className="bg-white border-2 border-black rounded-[1.5rem] shadow-[4px_4px_0_0_black] px-6 md:px-8 data-[state=open]:shadow-none data-[state=open]:translate-x-[4px] data-[state=open]:translate-y-[4px] transition-all overflow-hidden"
+                  >
+                    <AccordionTrigger className="hover:no-underline py-6 text-left font-outfit font-black text-lg md:text-xl uppercase group [&>svg]:text-black">
+                      <span className="group-data-[state=open]:text-[hsl(var(--accent-orange))] transition-colors pr-4 leading-tight">{faq.q}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-8 text-black/60 font-outfit text-lg leading-relaxed pt-2">
+                      {faq.a}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
 
+          </div>
         </div>
       </div>
     </PageLayout>

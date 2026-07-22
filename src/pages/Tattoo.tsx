@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import GalleryGrid from "@/components/GalleryGrid";
+import ImageLightbox from "@/components/ImageLightbox";
 import { Link } from "react-router-dom";
 import { Instagram, MessageCircle, ArrowRight } from "lucide-react";
 
 // Assets
 import tattooShape from '@/assets/elements/tattoo-shape.webp';
-import blobFace from '@/assets/blobs/face.webp';
-import blobPaint from '@/assets/blobs/paint.webp';
-import blobTattoo from '@/assets/blobs/tattoo.webp';
 import star from '@/assets/elements/star.png';
 
 import { supabase } from "@/utils/supabase";
@@ -22,6 +20,9 @@ interface Artwork {
 
 const Tattoo = () => {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const lightboxImages = artworks.filter(a => a.image);
 
   useEffect(() => {
     async function loadTattoos() {
@@ -46,22 +47,28 @@ const Tattoo = () => {
         console.error("Unexpected error loading tattoos:", err);
       }
 
-      // Fallback
-      const initial = Array.from({ length: 9 }, (_, i) => ({
-        id: `t-${i}`,
-        title: `Tattoo Design #${i + 1}`,
-        image: "",
-        isStarred: i === 0
-      }));
-      setArtworks(initial);
+      // No data: leave artworks empty so empty state is shown
     }
     loadTattoos();
   }, []);
 
   const starredItem = artworks.find(item => item.isStarred) || artworks[0];
   const otherItems = artworks.filter(item => item.id !== (starredItem?.id || ""));
+
+  const openLightbox = (id: string) => {
+    const idx = lightboxImages.findIndex(a => a.id === id);
+    if (idx !== -1) setLightboxIndex(idx);
+  };
   return (
     <PageLayout>
+      {lightboxIndex !== null && (
+        <ImageLightbox
+          images={lightboxImages}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onNavigate={setLightboxIndex}
+        />
+      )}
       <style>{`
         @keyframes floatA {
           0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -150,7 +157,6 @@ const Tattoo = () => {
                 src={tattooShape} 
                 alt="Tattoo Shape" 
                 loading="eager"
-                fetchPriority="high"
                 className="relative z-10 w-full max-w-[260px] md:max-w-none h-auto object-contain object-center lg:object-top"
                 style={{ maxHeight: '100%' }}
               />
@@ -180,57 +186,63 @@ const Tattoo = () => {
           </div>
         </div>
         
-        {/* Custom Grid Layout - Mobile: 3 columns (2x2 principal + 1x1 others) */}
-        <div className="grid grid-cols-3 gap-3 md:gap-8">
-          
-          {/* 1. Large Vertical Placeholder (Top Left) - 2x2 */}
-          {starredItem && (
-            <div className="col-span-2 row-span-2 aspect-square md:aspect-auto bg-[#1a1a1a] border-2 border-black/5 rounded-tl-[3rem] md:rounded-tl-[6rem] rounded-br-[3rem] md:rounded-br-[6rem] rounded-tr-[1rem] md:rounded-tr-[1.5rem] rounded-bl-[1rem] md:rounded-bl-[1.5rem] shadow-[6px_6px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-3 md:p-10 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate md:min-h-[500px] lg:min-h-[600px]">
-              {starredItem.image ? (
-                <img src={starredItem.image} alt={starredItem.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              ) : (
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border-4 border-dashed border-white/10 mb-2 md:mb-6 flex items-center justify-center animate-spin-slow">
-                    <div className="w-6 h-6 md:w-10 md:h-10 bg-[hsl(var(--accent-orange))] rounded-full opacity-20" />
-                  </div>
-                </div>
-              )}
-              <div className="relative z-10 bg-zinc-900 border-2 border-black p-1.5 md:p-3.5 rounded-lg md:rounded-xl shadow-[2px_2px_0_0_black] md:shadow-[3px_3px_0_0_black] w-full md:max-w-xs mt-auto flex items-center gap-1 md:gap-2">
-                <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0 animate-pulse" />
-                <p className="text-white font-black text-[8px] md:text-sm uppercase font-outfit tracking-wider leading-tight truncate">{starredItem.title}</p>
-              </div>
+        {artworks.length === 0 ? (
+          /* Empty State */
+          <div className="flex flex-col items-center justify-center py-32 gap-6">
+            <div className="w-24 h-24 rounded-[2rem] bg-black flex items-center justify-center shadow-[6px_6px_0_0_hsl(var(--accent-orange))] border-2 border-black">
+              <span className="text-4xl">🎨</span>
             </div>
-          )}
-
-          {/* 2-12. Other items - 1x1 */}
-          {otherItems.map((item, index) => {
-            const isTaller = index === 2 || index === 3 || index === 4 || index === 5;
-            return (
-              <div 
-                key={item.id} 
-                className={`bg-[#1a1a1a] border-2 border-black/5 shadow-[4px_4px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-2.5 md:p-8 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate aspect-square md:aspect-auto ${
-                  isTaller ? "md:min-h-[320px]" : "md:min-h-[280px]"
-                } ${
-                  index % 2 === 0 
-                    ? "rounded-tr-[1.5rem] md:rounded-tr-[3rem] rounded-bl-[1.5rem] md:rounded-bl-[3rem] rounded-tl-[0.5rem] md:rounded-tl-[0.75rem] rounded-br-[0.5rem] md:rounded-br-[0.75rem]" 
-                    : "rounded-tl-[1.5rem] md:rounded-tl-[3rem] rounded-br-[1.5rem] md:rounded-br-[3rem] rounded-tr-[0.5rem] md:rounded-tr-[0.75rem] rounded-bl-[0.5rem] md:rounded-bl-[0.75rem]"
-                }`}
+            <div className="text-center">
+              <h3 className="text-3xl font-black font-outfit uppercase">Ops! Nada por aqui.</h3>
+              <p className="text-black/40 font-outfit mt-2 max-w-sm">Ainda não tem trabalhos publicados nessa categoria. Em breve tem novidade!</p>
+            </div>
+            <a href="https://wa.me/556493180314" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-[hsl(var(--accent-orange))] text-white px-6 py-3 rounded-2xl font-black shadow-[4px_4px_0_0_black] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all font-outfit uppercase text-sm border-2 border-black">
+              Encomendar um trabalho
+            </a>
+          </div>
+        ) : (
+          /* Custom Grid Layout */
+          <div className="grid grid-cols-3 gap-3 md:gap-8">
+            {starredItem && (
+              <div
+                onClick={() => starredItem.image && openLightbox(starredItem.id)}
+                className={`col-span-2 row-span-2 aspect-square md:aspect-auto bg-[#1a1a1a] border-2 border-black/5 rounded-tl-[3rem] md:rounded-tl-[6rem] rounded-br-[3rem] md:rounded-br-[6rem] rounded-tr-[1rem] md:rounded-tr-[1.5rem] rounded-bl-[1rem] md:rounded-bl-[1.5rem] shadow-[6px_6px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-3 md:p-10 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate md:min-h-[500px] lg:min-h-[600px] ${starredItem.image ? 'cursor-pointer' : ''}`}
               >
-                {item.image ? (
-                  <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                ) : (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-8 h-8 md:w-12 md:h-12 bg-white/5 rounded-lg md:rounded-2xl" />
-                  </div>
+                {starredItem.image && (
+                  <img src={starredItem.image} alt={starredItem.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 )}
-                <div className="relative z-10 bg-zinc-900 border-2 border-black p-1 md:p-2.5 rounded md:rounded-lg shadow-[1.5px_1.5px_0_0_black] md:shadow-[2.5px_2.5px_0_0_black] w-full mt-auto flex items-center gap-1 md:gap-1.5">
-                  <div className="w-1 h-1 bg-[hsl(var(--accent-orange))] rounded-full shrink-0" />
-                  <p className="text-white font-black uppercase font-outfit tracking-wider text-[7px] md:text-[10px] truncate">{item.title}</p>
+                <div className="relative z-10 bg-zinc-900 border-2 border-black p-1.5 md:p-3.5 rounded-lg md:rounded-xl shadow-[2px_2px_0_0_black] md:shadow-[3px_3px_0_0_black] w-full md:max-w-xs mt-auto flex items-center gap-1 md:gap-2">
+                  <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0 animate-pulse" />
+                  <p className="text-white font-black text-[8px] md:text-sm uppercase font-outfit tracking-wider leading-tight truncate">{starredItem.title}</p>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            )}
+            {otherItems.map((item, index) => {
+              const isTaller = index === 2 || index === 3 || index === 4 || index === 5;
+              return (
+                <div
+                  key={item.id}
+                  onClick={() => item.image && openLightbox(item.id)}
+                  className={`bg-[#1a1a1a] border-2 border-black/5 shadow-[4px_4px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-2.5 md:p-8 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate aspect-square md:aspect-auto ${
+                    isTaller ? "md:min-h-[320px]" : "md:min-h-[280px]"
+                  } ${
+                    index % 2 === 0
+                      ? "rounded-tr-[1.5rem] md:rounded-tr-[3rem] rounded-bl-[1.5rem] md:rounded-bl-[3rem] rounded-tl-[0.5rem] md:rounded-tl-[0.75rem] rounded-br-[0.5rem] md:rounded-br-[0.75rem]"
+                      : "rounded-tl-[1.5rem] md:rounded-tl-[3rem] rounded-br-[1.5rem] md:rounded-br-[3rem] rounded-tr-[0.5rem] md:rounded-tr-[0.75rem] rounded-bl-[0.5rem] md:rounded-bl-[0.75rem]"
+                  } ${item.image ? 'cursor-pointer' : ''}`}
+                >
+                  {item.image && (
+                    <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                  )}
+                  <div className="relative z-10 bg-zinc-900 border-2 border-black p-1 md:p-2.5 rounded md:rounded-lg shadow-[1.5px_1.5px_0_0_black] md:shadow-[2.5px_2.5px_0_0_black] w-full mt-auto flex items-center gap-1 md:gap-1.5">
+                    <div className="w-1 h-1 bg-[hsl(var(--accent-orange))] rounded-full shrink-0" />
+                    <p className="text-white font-black uppercase font-outfit tracking-wider text-[7px] md:text-[10px] truncate">{item.title}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </PageLayout>
   );

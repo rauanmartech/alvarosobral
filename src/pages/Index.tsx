@@ -7,21 +7,19 @@ import muralImg from "@/assets/mura-card.jpg";
 import telasImg from "@/assets/telas-card.jpg";
 import digitalImg from "@/assets/digital-card.jpg";
 import alvaro2 from "@/assets/elements/alvaro2.webp";
+import { Instagram, Mail, MessageCircle, ArrowRight } from "lucide-react";
 import blobFace from "@/assets/blobs/face.webp";
 import blobPaint from "@/assets/blobs/paint.webp";
 import blobSpray from "@/assets/blobs/spray.webp";
 import blobTattoo from "@/assets/blobs/tattoo.webp";
-import blobPen from "@/assets/blobs/paint.webp";
-import { Instagram, Mail, MessageCircle, ArrowRight } from "lucide-react";
 
 const blobMap = {
   tattoo: blobTattoo,
   graffiti: blobSpray,
   telas: blobPaint,
-  ilustracoes: blobPen,
+  ilustracoes: blobFace,
   all: blobFace
 };
-
 const areas = [
   { to: "/tattoo", label: "Tattoo" },
   { to: "/graffiti", label: "Graffiti / Mural" },
@@ -59,14 +57,9 @@ const Index = () => {
       link: "/telas"
     },
     ilustracoes: {
-      titleSuffix: "no digital",
-      text: "As ilustrações digitais são onde a tecnologia encontra a criatividade sem limites. De concept arts a peças publicitárias, utilizo ferramentas modernas para dar vida a mundos imaginários.",
-      link: "/diversos"
-    },
-    all: {
-      titleSuffix: "em todo lugar",
+      titleSuffix: "onde quiser",
       text: "Para mim, a arte não tem fronteiras. Independente da superfície a essência é a mesma: transformar, gerar conexão e impactar o mundo com um novo olhar!",
-      link: "/contato"
+      link: "/diversos"
     }
   };
 
@@ -217,7 +210,7 @@ const Index = () => {
               </div>
             </Link>
 
-            {/* Ilustrações Digitais Card - Full Image */}
+            {/* Onde Quiser Card - Full Image */}
             <Link
               to="/diversos"
               className="group relative rounded-[1.5rem] md:rounded-[2rem] transition-all duration-300 hover:-translate-y-1 shadow-[6px_6px_0_0_hsl(var(--accent-orange))] md:shadow-[8px_8px_0_0_hsl(var(--accent-orange))] hover:shadow-[4px_4px_0_0_hsl(var(--accent-orange))] min-h-[200px] md:min-h-[340px]"
@@ -225,7 +218,7 @@ const Index = () => {
               <div className="absolute inset-0 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden">
                 <img
                   src={digitalImg}
-                  alt="Ilustrações Digitais"
+                  alt="Arte onde quiser"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -233,7 +226,7 @@ const Index = () => {
               {/* Pop-art floating label */}
               <div className="absolute top-5 left-0 right-0 flex justify-center md:left-5 md:right-auto md:inline-flex z-10">
                 <span className="inline-block bg-white text-black font-black text-lg uppercase tracking-widest px-5 py-2 rounded-full border-2 border-black shadow-[4px_4px_0_0_black] group-hover:shadow-[2px_2px_0_0_black] group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-200 font-outfit">
-                  Digital
+                  Onde quiser
                 </span>
               </div>
               {/* Arrow button */}
@@ -321,12 +314,6 @@ const Index = () => {
                 >
                   <img src={digitalImg} alt="" className="w-full h-full object-cover" />
                 </button>
-                <button
-                  onClick={() => setActiveArea('all')}
-                  className={`w-12 h-12 overflow-hidden rounded-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center bg-black shrink-0 ${activeArea === 'all' ? 'grayscale-0 border-2 border-[hsl(var(--accent-orange))] shadow-lg' : 'grayscale opacity-50 hover:opacity-100'}`}
-                >
-                  <img src={images[cycleIndex]} alt="" className="w-full h-full object-cover" />
-                </button>
               </div>
 
               {/* Mobile-only: Click helper message */}
@@ -380,13 +367,6 @@ const Index = () => {
                 >
                   <img src={digitalImg} alt="" className="w-full h-full object-cover" />
                 </button>
-                {/* Mini [5] - All */}
-                <button
-                  onClick={() => setActiveArea('all')}
-                  className={`w-12 h-12 md:w-16 md:h-16 overflow-hidden rounded-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center bg-black ${activeArea === 'all' ? 'grayscale-0 border-2 border-[hsl(var(--accent-orange))] shadow-lg' : 'grayscale opacity-50 hover:opacity-100'}`}
-                >
-                  <img src={images[cycleIndex]} alt="" className="w-full h-full object-cover" />
-                </button>
               </div>
 
               {/* Main Diagram */}
@@ -399,7 +379,7 @@ const Index = () => {
                   {/* Top Left [1] - Tattoo */}
                   <button
                     onClick={() => setActiveArea('tattoo')}
-                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'tattoo' || activeArea === 'all' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
+                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-tl-[4rem] rounded-br-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'tattoo' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
                   >
                     <img src={tattooImg} alt="Tattoo" className="w-full h-full object-cover" />
                   </button>
@@ -407,7 +387,7 @@ const Index = () => {
                   {/* Top Right [2] - Mural */}
                   <button
                     onClick={() => setActiveArea('graffiti')}
-                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-tr-[4rem] rounded-bl-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'graffiti' || activeArea === 'all' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
+                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-tr-[4rem] rounded-bl-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'graffiti' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
                   >
                     <img src={muralImg} alt="Mural" className="w-full h-full object-cover" />
                   </button>
@@ -415,17 +395,17 @@ const Index = () => {
                   {/* Bottom Left [3] - Telas */}
                   <button
                     onClick={() => setActiveArea('telas')}
-                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-bl-[4rem] rounded-tr-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'telas' || activeArea === 'all' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
+                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-bl-[4rem] rounded-tr-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'telas' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
                   >
                     <img src={telasImg} alt="Telas" className="w-full h-full object-cover" />
                   </button>
 
-                  {/* Bottom Right [4] - Digital */}
+                  {/* Bottom Right [4] - Onde Quiser */}
                   <button
                     onClick={() => setActiveArea('ilustracoes')}
-                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-br-[4rem] rounded-tl-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'ilustracoes' || activeArea === 'all' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
+                    className={`w-[138px] h-[138px] md:w-48 md:h-48 overflow-hidden rounded-br-[4rem] rounded-tl-[4rem] transition-all duration-500 hover:scale-105 hover:shadow-lg hover:z-10 ${activeArea === 'ilustracoes' ? 'grayscale-0 scale-105 shadow-xl z-10' : 'grayscale'}`}
                   >
-                    <img src={digitalImg} alt="Digital" className="w-full h-full object-cover" />
+                    <img src={digitalImg} alt="Onde Quiser" className="w-full h-full object-cover" />
                   </button>
 
                 </div>
@@ -462,43 +442,7 @@ const Index = () => {
 
             {/* Left Image Side */}
             <div className="relative w-full lg:w-1/2 flex justify-center items-center">
-              {/* Floating Blobs around image */}
-              <img
-                src={blobFace}
-                alt=""
-                loading="lazy"
-                className="absolute z-30 pointer-events-none select-none w-[50px] md:w-[70px] top-[8%] left-[8%] md:left-[15%]"
-                style={{
-                  animation: 'floatA 5s ease-in-out infinite',
-                }}
-              />
-              <img
-                src={blobPaint}
-                alt=""
-                loading="lazy"
-                className="absolute z-30 pointer-events-none select-none w-[45px] md:w-[60px] top-[12%] right-[8%] md:right-[15%]"
-                style={{
-                  animation: 'floatB 6s ease-in-out infinite',
-                }}
-              />
-              <img
-                src={blobSpray}
-                alt=""
-                loading="lazy"
-                className="absolute z-30 pointer-events-none select-none w-[50px] md:w-[65px] bottom-[18%] left-[6%] md:left-[10%]"
-                style={{
-                  animation: 'floatC 7s ease-in-out infinite',
-                }}
-              />
-              <img
-                src={blobTattoo}
-                alt=""
-                loading="lazy"
-                className="absolute z-30 pointer-events-none select-none w-[45px] md:w-[60px] bottom-[14%] right-[6%] md:right-[10%]"
-                style={{
-                  animation: 'floatA 8s ease-in-out infinite reverse',
-                }}
-              />
+
 
               {/* Decorative Blob */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[224px] h-[224px] md:w-[315px] md:h-[315px] bg-gradient-to-b from-orange-400 to-orange-600 rounded-full opacity-100" />

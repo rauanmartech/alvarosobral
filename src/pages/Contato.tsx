@@ -13,10 +13,6 @@ import {
 
 // Assets
 import alvaro2 from "@/assets/elements/alvaro2.webp";
-import blobFace from "@/assets/blobs/face.webp";
-import blobPaint from "@/assets/blobs/paint.webp";
-import blobSpray from "@/assets/blobs/spray.webp";
-import blobTattoo from "@/assets/blobs/tattoo.webp";
 
 // WhatsApp SVG Icon Component
 const WhatsAppIcon = ({ size = 20, className = "" }: { size?: number, className?: string }) => (
@@ -137,20 +133,20 @@ const Contato = () => {
           {/* Image Section - 1/3 width */}
           <div className="w-full lg:w-1/3 flex flex-col items-center justify-center">
             <div className="relative w-full max-w-[380px] aspect-square flex items-center justify-center">
-              {/* Background Decorative Elements */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[70%] aspect-square bg-gradient-to-b from-orange-400 to-orange-600 rounded-full opacity-100 pointer-events-none" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] aspect-square border border-solid border-black rounded-full animate-spin-slow pointer-events-none" />
+              {/* Background Decorative Elements (Concentric) */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                {/* Thin Ring */}
+                <div className="absolute w-[75%] md:w-[85%] aspect-square border border-solid border-black rounded-full" />
+                {/* Orange Circle */}
+                <div className="absolute w-[60%] md:w-[70%] aspect-square bg-[hsl(var(--accent-orange))] rounded-full" />
+              </div>
 
-              {/* Floating Blobs */}
-              <img src={blobFace} alt="" className="absolute z-10 w-16 -top-4 left-0" style={{ animation: 'floatA 5s ease-in-out infinite' }} />
-              <img src={blobPaint} alt="" className="absolute z-10 w-12 top-8 -right-4" style={{ animation: 'floatB 6s ease-in-out infinite' }} />
-              <img src={blobSpray} alt="" className="absolute z-10 w-16 bottom-8 -left-4" style={{ animation: 'floatC 7s ease-in-out infinite' }} />
-              <img src={blobTattoo} alt="" className="absolute z-10 w-12 -bottom-4 right-0" style={{ animation: 'floatA 8s ease-in-out infinite reverse' }} />
+
               
               <img 
                 src={alvaro2} 
                 alt="Alvaro" 
-                className="relative z-0 w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                className="relative z-20 w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>

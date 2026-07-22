@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
+import ImageLightbox from "@/components/ImageLightbox";
 import { Instagram, ArrowRight } from "lucide-react";
 
 // Assets
@@ -20,6 +21,9 @@ interface Artwork {
 
 const Telas = () => {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const lightboxImages = artworks.filter(a => a.image);
 
   useEffect(() => {
     async function loadTelas() {
@@ -44,14 +48,7 @@ const Telas = () => {
         console.error("Unexpected error loading telas:", err);
       }
 
-      // Fallback
-      const initial = Array.from({ length: 9 }, (_, i) => ({
-        id: `c-${i}`,
-        title: `Tela Canvas #${i + 1}`,
-        image: "",
-        isStarred: i === 0
-      }));
-      setArtworks(initial);
+      // No data: leave artworks empty so empty state is shown
     }
     loadTelas();
   }, []);
@@ -59,8 +56,21 @@ const Telas = () => {
   const starredItem = artworks.find(item => item.isStarred) || artworks[0];
   const otherItems = artworks.filter(item => item.id !== (starredItem?.id || ""));
 
+  const openLightbox = (id: string) => {
+    const idx = lightboxImages.findIndex(a => a.id === id);
+    if (idx !== -1) setLightboxIndex(idx);
+  };
+
   return (
     <PageLayout>
+      {lightboxIndex !== null && (
+        <ImageLightbox
+          images={lightboxImages}
+          currentIndex={lightboxIndex}
+          onClose={() => setLightboxIndex(null)}
+          onNavigate={setLightboxIndex}
+        />
+      )}
       <style>{`
         @keyframes floatA {
           0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -79,8 +89,8 @@ const Telas = () => {
       {/* Banner Section */}
       <div className="container mx-auto px-6 mb-20">
         <section className="relative bg-[#1a1a1a] rounded-[3rem] min-h-[600px] flex items-center overflow-hidden">
-          <div className="w-full px-6 py-12 lg:py-0 lg:h-full lg:min-h-[600px] flex items-center relative z-10">
-            <div className="flex flex-col lg:flex-row items-center gap-12 w-full">
+          <div className="w-full px-6 pt-12 pb-0 lg:py-0 lg:h-full lg:min-h-[600px] flex items-center relative z-10">
+            <div className="flex flex-col lg:flex-row items-center gap-12 w-full lg:h-full">
             
             {/* Left Side: Content */}
             <div className="flex-1 z-10 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -137,7 +147,7 @@ const Telas = () => {
             </div>
 
             {/* Right Side: Visual Container (Shapes, Image, and Blobs) - Mobile: flows below text, Desktop: absolute on the right */}
-            <div className="relative w-full lg:absolute lg:top-0 lg:right-0 lg:h-full lg:w-1/2 flex justify-center items-end min-h-[350px] lg:min-h-0 z-0">
+            <div className="relative w-full lg:absolute lg:top-0 lg:right-0 lg:h-full lg:w-1/2 flex justify-center items-end min-h-[400px] md:min-h-[500px] lg:min-h-0 z-0">
               {/* Geometric Background Shapes */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[500px] md:h-[500px] bg-[hsl(var(--accent-orange))] rounded-full opacity-10 z-0" />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[196px] h-[196px] md:w-[350px] md:h-[350px] bg-gradient-to-b from-orange-400 to-orange-600 rounded-full opacity-100 z-0" />
@@ -149,8 +159,7 @@ const Telas = () => {
                 src={telaShape} 
                 alt="Tela Shape" 
                 loading="eager"
-                fetchPriority="high"
-                className="relative z-10 w-full max-w-[260px] md:max-w-none h-auto object-contain object-bottom lg:object-right-bottom lg:scale-[0.87] lg:origin-bottom-right"
+                className="relative z-10 w-[115%] max-w-[340px] md:max-w-[450px] lg:max-w-none h-auto lg:h-[90%] lg:w-auto object-contain object-bottom lg:object-right-bottom translate-y-4 lg:translate-y-0"
               />
 
 
@@ -178,51 +187,60 @@ const Telas = () => {
           </div>
         </div>
         
-        {/* Custom Grid Layout - Mobile: 3 columns (2x2 principal + 1x1 others) */}
-        <div className="grid grid-cols-3 gap-3 md:gap-8">
-          {/* Card 1: Large - 2x2 */}
-          {starredItem && (
-            <div className="col-span-2 row-span-2 aspect-square md:aspect-auto bg-[#1a1a1a] border-2 border-black/5 rounded-tl-[3rem] md:rounded-tl-[6rem] rounded-br-[3rem] md:rounded-br-[6rem] rounded-tr-[1rem] md:rounded-tr-[1.5rem] rounded-bl-[1rem] md:rounded-bl-[1.5rem] shadow-[6px_6px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-3 md:p-10 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate md:min-h-[500px] lg:min-h-[600px]">
-              {starredItem.image ? (
-                <img src={starredItem.image} alt={starredItem.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              ) : (
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border-4 border-dashed border-white/10 mb-2 md:mb-6 flex items-center justify-center animate-spin-slow">
-                    <div className="w-6 h-6 md:w-10 md:h-10 bg-[hsl(var(--accent-orange))] rounded-full opacity-20" />
-                  </div>
-                </div>
-              )}
-              <div className="relative z-10 bg-zinc-900 border-2 border-black p-1.5 md:p-3.5 rounded-lg md:rounded-xl shadow-[2px_2px_0_0_black] md:shadow-[3px_3px_0_0_black] w-full md:max-w-xs mt-auto flex items-center gap-1 md:gap-2">
-                <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0 animate-pulse" />
-                <p className="text-white font-black text-[8px] md:text-sm uppercase font-outfit tracking-wider leading-tight truncate">{starredItem.title}</p>
-              </div>
+        {artworks.length === 0 ? (
+          /* Empty State */
+          <div className="flex flex-col items-center justify-center py-32 gap-6">
+            <div className="w-24 h-24 rounded-[2rem] bg-black flex items-center justify-center shadow-[6px_6px_0_0_hsl(var(--accent-orange))] border-2 border-black">
+              <span className="text-4xl">🎨</span>
             </div>
-          )}
+            <div className="text-center">
+              <h3 className="text-3xl font-black font-outfit uppercase">Ops! Nada por aqui.</h3>
+              <p className="text-black/40 font-outfit mt-2 max-w-sm">Ainda não tem trabalhos publicados nessa categoria. Em breve tem novidade!</p>
+            </div>
+            <a href="https://wa.me/556493180314" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 bg-[hsl(var(--accent-orange))] text-white px-6 py-3 rounded-2xl font-black shadow-[4px_4px_0_0_black] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all font-outfit uppercase text-sm border-2 border-black">
+              Encomendar um trabalho
+            </a>
+          </div>
+        ) : (
+          /* Custom Grid Layout */
+          <div className="grid grid-cols-3 gap-3 md:gap-8">
+            {starredItem && (
+              <div 
+                onClick={() => starredItem.image && openLightbox(starredItem.id)}
+                className={`col-span-2 row-span-2 aspect-square md:aspect-auto bg-[#1a1a1a] border-2 border-black/5 rounded-tl-[3rem] md:rounded-tl-[6rem] rounded-br-[3rem] md:rounded-br-[6rem] rounded-tr-[1rem] md:rounded-tr-[1.5rem] rounded-bl-[1rem] md:rounded-bl-[1.5rem] shadow-[6px_6px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-3 md:p-10 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate md:min-h-[500px] lg:min-h-[600px] ${starredItem.image ? 'cursor-pointer' : ''}`}
+              >
+                {starredItem.image && (
+                  <img src={starredItem.image} alt={starredItem.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                )}
+                <div className="relative z-10 bg-zinc-900 border-2 border-black p-1.5 md:p-3.5 rounded-lg md:rounded-xl shadow-[2px_2px_0_0_black] md:shadow-[3px_3px_0_0_black] w-full md:max-w-xs mt-auto flex items-center gap-1 md:gap-2">
+                  <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0 animate-pulse" />
+                  <p className="text-white font-black text-[8px] md:text-sm uppercase font-outfit tracking-wider leading-tight truncate">{starredItem.title}</p>
+                </div>
+              </div>
+            )}
 
-          {/* Cards 2-12 - 1x1 */}
-          {otherItems.map((item, index) => (
-            <div 
-              key={item.id} 
-              className={`bg-[#1a1a1a] border-2 border-black/5 shadow-[4px_4px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-2.5 md:p-8 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate aspect-square md:aspect-auto md:min-h-[280px] ${
-                index % 2 === 0 
-                  ? 'rounded-tr-[1.5rem] md:rounded-tr-[3rem] rounded-bl-[1.5rem] md:rounded-bl-[3rem] rounded-tl-[0.5rem] md:rounded-tl-[0.75rem] rounded-br-[0.5rem] md:rounded-br-[0.75rem]' 
-                  : 'rounded-tl-[1.5rem] md:rounded-tl-[3rem] rounded-br-[1.5rem] md:rounded-br-[3rem] rounded-tr-[0.5rem] md:rounded-tr-[0.75rem] rounded-bl-[0.5rem] md:rounded-bl-[0.75rem]'
-              }`}
-            >
-              {item.image ? (
-                <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-              ) : (
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-8 h-8 md:w-12 md:h-12 bg-white/5 rounded-lg md:rounded-2xl" />
+            {/* Cards 2-12 - 1x1 */}
+            {otherItems.map((item, index) => (
+              <div 
+                key={item.id} 
+                onClick={() => item.image && openLightbox(item.id)}
+                className={`bg-[#1a1a1a] border-2 border-black/5 shadow-[4px_4px_0_0_black] md:shadow-[12px_12px_0_0_black] flex flex-col items-end justify-start p-2.5 md:p-8 group hover:-translate-y-2 transition-all duration-300 relative overflow-hidden [transform:translate3d(0,0,0)] isolation-isolate aspect-square md:aspect-auto md:min-h-[280px] ${
+                  index % 2 === 0 
+                    ? 'rounded-tr-[1.5rem] md:rounded-tr-[3rem] rounded-bl-[1.5rem] md:rounded-bl-[3rem] rounded-tl-[0.5rem] md:rounded-tl-[0.75rem] rounded-br-[0.5rem] md:rounded-br-[0.75rem]' 
+                    : 'rounded-tl-[1.5rem] md:rounded-tl-[3rem] rounded-br-[1.5rem] md:rounded-br-[3rem] rounded-tr-[0.5rem] md:rounded-tr-[0.75rem] rounded-bl-[0.5rem] md:rounded-bl-[0.75rem]'
+                } ${item.image ? 'cursor-pointer' : ''}`}
+              >
+                {item.image && (
+                  <img src={item.image} alt={item.title} loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                )}
+                <div className="relative z-10 bg-zinc-900 border-2 border-black p-1 md:p-2.5 rounded md:rounded-lg shadow-[1.5px_1.5px_0_0_black] md:shadow-[2.5px_2.5px_0_0_black] w-full mt-auto flex items-center gap-1 md:gap-1.5">
+                  <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0" />
+                  <p className="text-white font-black uppercase font-outfit tracking-wider text-[7px] md:text-[10px] truncate">{item.title}</p>
                 </div>
-              )}
-              <div className="relative z-10 bg-zinc-900 border-2 border-black p-1 md:p-2.5 rounded md:rounded-lg shadow-[1.5px_1.5px_0_0_black] md:shadow-[2.5px_2.5px_0_0_black] w-full mt-auto flex items-center gap-1 md:gap-1.5">
-                <div className="w-1.5 h-1.5 bg-[hsl(var(--accent-orange))] rounded-full shrink-0" />
-                <p className="text-white font-black uppercase font-outfit tracking-wider text-[7px] md:text-[10px] truncate">{item.title}</p>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </PageLayout>
   );
